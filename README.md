@@ -1,2 +1,6 @@
-# RileyHerbstProject
-My Masters project for the 2024-2025 Year
+# Riley Herbst Masters Project
+- This project will be a collaberation with the Field Museum and with Alex Wolpert and Matt von Konrat. 
+
+- All Updates will be under the Documentation.md file.
+****
+
