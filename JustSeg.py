@@ -142,7 +142,17 @@ def main_pipeline(input_folder, output_folder):
             monitor_thread.join()
 
 if __name__ == "__main__":
-    # Sample input and output folders
+    #Versions checking
+    print(torch.version.cuda)
+
+    if torch.cuda.is_available():
+        print(torch.version.cuda)
+        print(torch.cuda.get_device_name(0))
+        print(torch.cuda.current_device())
+        print(torch.cuda.device_count())
+    else:
+        print("No GPU available")
+
     print("Starting...")
     input_folder = "C:\\Users\\Riley\\Desktop\\Portal\\Code\\10Images"  # Update this path as needed
     output_folder = "c:\\Users\\Riley\\Desktop\\Portal\\Code\\SegImages"  # Update this path as needed
