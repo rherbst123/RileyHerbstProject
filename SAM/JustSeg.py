@@ -63,7 +63,7 @@ def generate_segmentation(image_path, mask_generator):
     image = cv2.imread(image_path)
     if image is None:
         raise ValueError(f"Failed to read image {image_path}")
-    max_dimension = 1024
+    max_dimension = 4096
     scale = max_dimension / max(image.shape[:2])
     if scale < 1:
         image = cv2.resize(image, (int(image.shape[1]*scale), int(image.shape[0]*scale)))
@@ -77,7 +77,7 @@ def visualize_and_save_segmentation(image, masks, output_path):
 
     for mask in masks:
         mask_image = mask['segmentation']
-        plt.contour(mask_image, colors=[np.random.rand(3,)])
+        plt.contour(mask_image, colors="black")
 
     plt.axis('off')
     plt.tight_layout()
@@ -143,13 +143,13 @@ def main_pipeline(input_folder, output_folder):
 
 if __name__ == "__main__":
     #Versions checking
-    print(torch.version.cuda)
+    
 
     if torch.cuda.is_available():
-        print(torch.version.cuda)
-        print(torch.cuda.get_device_name(0))
-        print(torch.cuda.current_device())
-        print(torch.cuda.device_count())
+        print("Cuda Version:",torch.version.cuda)
+        print("GPU Used:",torch.cuda.get_device_name(0))
+        print("Current Gpu Code Used:",torch.cuda.current_device())
+        print("Number of GPU's installed:",torch.cuda.device_count())
     else:
         print("No GPU available")
 
