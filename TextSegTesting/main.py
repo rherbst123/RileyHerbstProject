@@ -12,7 +12,7 @@ jpgImages = glob.glob("jpgImgs/*.JPG")
 def main():
     for jpg in jpgImages:
         print(jpg)
-        directory = "C:\\Users\\riley\\Documents\\GitHub\\RileyHerbstProject\\jpgImgs"
+        directory = "C:\\Users\\riley\\Documents\\GitHub\\RileyHerbstProject\\SegmentedImages"
         image = cv2.imread(jpg)
         returnImage = preProcessing(image)
         cv2.imshow(f"After Processed Image {jpg}", returnImage)
