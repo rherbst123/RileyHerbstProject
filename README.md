@@ -9,5 +9,7 @@
 
 - September 27th, Using LLM Whisperer And a structured extraction and parser using OpenAI. This process needs to be done in a Linux system so it resides in WSL. Code is available on here but if not on windows system it will NOT WORK.
 
+- October 8th, Adding Automated Image Cropping based on segmented Images. (Look into colors for borders maybe some are different from others in effectiveness??)
+
 ****
 
