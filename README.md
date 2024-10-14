@@ -11,5 +11,7 @@
 
 - October 8th, Adding Automated Image Cropping based on segmented Images. (Look into colors for borders maybe some are different from others in effectiveness??)
 
+- Oct 11th, SAM model is able to segment Images and stores each segment in a list. Taking the two/three largest segments and combining them together seems to be a good idea. BUT I need to specify the segmentation to just regions of text. Doing some test of segmentation seems to take from 17-39 Seconds Per Image. If this was hosted on some server would be a LOT faster.
+
 ****
 
