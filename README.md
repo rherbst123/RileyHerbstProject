@@ -3,9 +3,9 @@
 
 - All Updates will be under the Documentation.md file.
 ****
-- September 13th, Added Pre-Processing and simple OCR for bounding boxes. Under TextSegTesting
+- September 13th, Added Pre-Processing and simple OCR for bounding boxes. Under TextSegTesting.
 
-- September 20th, Updates to TextSeg testing and Sam Model Setup. This is our image segmentation process. 
+- September 20th, Updates to TextSeg testing and Sam Model Setup. This is our image segmentation process.
 
 - September 27th, Using LLM Whisperer And a structured extraction and parser using OpenAI. This process needs to be done in a Linux system so it resides in WSL. Code is available on here but if not on windows system it will NOT WORK.
 
@@ -13,5 +13,6 @@
 
 - Oct 11th, SAM model is able to segment Images and stores each segment in a list. Taking the two/three largest segments and combining them together seems to be a good idea. BUT I need to specify the segmentation to just regions of text. Doing some test of segmentation seems to take from 17-39 Seconds Per Image. If this was hosted on some server would be a LOT faster.
 
-****
+- Oct 14th, Detectron introduction and finding out ease of finetuning. 
 
+****
