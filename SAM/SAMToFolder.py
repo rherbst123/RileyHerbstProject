@@ -47,7 +47,7 @@ def resource_monitor(pbar, stop_event, pbar_lock):
 
 # Load the Segment Anything Model
 def initialize_sam():
-    sam_checkpoint = "C:\\Users\\riley\\Desktop\\Code\\sam_vit_h_4b8939.pth"  # Update this path as needed
+    sam_checkpoint = "c:\\Users\\Riley\\Desktop\\sam_vit_h_4b8939.pth"  # Update this path as needed
     model_type = "vit_h"
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
@@ -55,12 +55,12 @@ def initialize_sam():
     sam.to(device=device)
     return SamAutomaticMaskGenerator(
         sam,
-        points_per_side=8,  # Number of points to sample per side of the image
-        pred_iou_thresh=0.90,  # Threshold for the predicted Intersection over Union (IoU) score
+        points_per_side=10,  # Number of points to sample per side of the image
+        pred_iou_thresh=0.85,  # Threshold for the predicted Intersection over Union (IoU) score
         stability_score_thresh=0.95,  # Threshold for the stability score of the mask
         crop_n_layers=0,  # Number of layers to crop from the image
         crop_n_points_downscale_factor=2,  # Factor to downscale the number of points when cropping
-        min_mask_region_area=5500,  # Minimum area (in pixels) for a mask region to be considered valid  # Adjusted to ignore smaller regions
+        min_mask_region_area=5000,  # Minimum area (in pixels) for a mask region to be considered valid  # Adjusted to ignore smaller regions
     )
 
 # Segment the image
@@ -194,6 +194,6 @@ if __name__ == "__main__":
         print("No GPU available")
 
     print("Starting...")
-    input_folder = "c:\\Users\\riley\\Desktop\\Code\\PythonForWork\\images"  # Update this path as needed
-    output_folder = "c:\\Users\\Riley\\Desktop\\SEGTESTINGFOLER2"  # Update this path as needed
+    input_folder = "C:\\Users\\Riley\\Desktop\\Portal\\Code\\Images"  # Update this path as needed
+    output_folder = "C:\\Users\\Riley\\Desktop\\SEGTESTINGFOLER_200ImageTest2"  # Update this path as needed
     main_pipeline(input_folder, output_folder)
