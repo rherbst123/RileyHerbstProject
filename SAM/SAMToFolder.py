@@ -56,12 +56,12 @@ def initialize_sam():
     sam.to(device=device)
     return SamAutomaticMaskGenerator(
         sam,
-        points_per_side=10,  # Number of points to sample per side of the image
-        pred_iou_thresh=0.85,  # Threshold for the predicted Intersection over Union (IoU) score
-        stability_score_thresh=0.95,  # Threshold for the stability score of the mask
+        points_per_side=16,  # Number of points to sample per side of the image
+        pred_iou_thresh=0.90,  # Threshold for the predicted Intersection over Union (IoU) score
+        stability_score_thresh=0.90,  # Threshold for the stability score of the mask
         crop_n_layers=0,  # Number of layers to crop from the image
         crop_n_points_downscale_factor=2,  # Factor to downscale the number of points when cropping
-        min_mask_region_area=5000,  # Minimum area (in pixels) for a mask region to be considered valid  # Adjusted to ignore smaller regions
+        min_mask_region_area=3500,  # Minimum area (in pixels) for a mask region to be considered valid  # Adjusted to ignore smaller regions
     )
 
 # Segment the image
@@ -83,11 +83,11 @@ def visualize_and_save_segmentation(image, masks, output_folder):
 
     for mask in masks:
         mask_image = mask['segmentation']
-        plt.contour(mask_image, colors="black")
+        plt.contour(mask_image, colors="red")
 
     plt.axis('off')
     plt.tight_layout()
-    output_file = os.path.join(output_folder, 'segmentation_visualization.png')
+    output_file = os.path.join(output_folder, f'{os.path.basename(output_folder)}_segmentation_visualization.png')
     plt.savefig(output_file, bbox_inches='tight', pad_inches=0)
     plt.close()
 
@@ -196,5 +196,5 @@ if __name__ == "__main__":
 
     print("Starting...")
     input_folder = "C:\\Users\\Riley\\Desktop\\Portal\\Code\\Images"  # Update this path as needed
-    output_folder = "C:\\Users\\Riley\\Desktop\\SEGTESTINGFOLER_200ImageTest2"  # Update this path as needed
+    output_folder = "C:\\Users\\Riley\\Desktop\\SEGTESTINGFOLER_200ImageTest7"  # Update this path as needed
     main_pipeline(input_folder, output_folder)
