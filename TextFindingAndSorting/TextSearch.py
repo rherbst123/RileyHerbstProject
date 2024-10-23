@@ -5,7 +5,7 @@ import os
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'  # Update this path as needed
 
 # Folder containing the images and subfolders
-base_folder = "c:\\Users\\Riley\\Desktop\\SEGTESTINGFOLER_200ImageTest2"
+base_folder = "c:\\Users\\Riley\\Desktop\\TrickyTest"
 
 # Iterate through each folder and subfolder
 # for root, dirs, files in os.walk(base_folder):
@@ -67,13 +67,13 @@ for root, dirs, files in os.walk(base_folder):
                 word_count = len(words)
                 
                 # If fewer than 7 words are detected, delete the image
-                if word_count < 7:
+                if word_count < 4:
                     print(f"Only {word_count} words detected in {filename}. Deleting...")
                     os.remove(file_path)
                     continue
 
                 # If the resolution is higher than 2000x2000, delete the image
-                if width > 2000 or height > 2000:
+                if width > 1700 or height > 2100:
                     print(f"Image {filename} has a resolution of {width}x{height}. Deleting...")
                     os.remove(file_path)
                     continue
