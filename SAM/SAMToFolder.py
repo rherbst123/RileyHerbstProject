@@ -13,7 +13,7 @@ import time
 import os
 
 
-# This script outputs each image into its own folder containig   the segmentation visualization and the cropped masks
+#This script outputs each image into its own folder containig   the segmentation visualization and the cropped masks
 # As of 10.8.24 I am using Python 3.12.7 with CUDA 11.8 and Torch 2.4.1.
 # Results may vary or may not work depending on your packages.
 
