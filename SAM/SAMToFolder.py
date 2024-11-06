@@ -47,15 +47,15 @@ def resource_monitor(pbar, stop_event, pbar_lock):
 
 # Load the Segment Anything Model
 def initialize_sam():
-    sam_checkpoint = "c:\\Users\\Riley\\Desktop\\sam_vit_h_4b8939.pth"  # Update this path as needed
-    model_type = "vit_h"
+    sam_checkpoint = "C:\\Users\\riley\\Desktop\\Code\\sam_vit_b_01ec64.pth"  # Update this path as needed
+    model_type = "vit_b"
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
     sam = sam_model_registry[model_type](checkpoint=sam_checkpoint)
     sam.to(device=device)
     return SamAutomaticMaskGenerator(
         sam,
-        points_per_side=16,  # Number of points to sample per side of the image
+        points_per_side=10,  # Number of points to sample per side of the image
         pred_iou_thresh=0.90,  # Threshold for the predicted Intersection over Union (IoU) score
         stability_score_thresh=0.90,  # Threshold for the stability score of the mask
         crop_n_layers=0,  # Number of layers to crop from the image
@@ -102,6 +102,8 @@ def crop_and_save_masks(image, masks, output_folder):
         y = int(max(y, 0))
         w = int(w)
         h = int(h)
+        
+        
 
         # Ensure coordinates are within image bounds
         x_end = min(x + w, image.shape[1])
@@ -119,6 +121,9 @@ def crop_and_save_masks(image, masks, output_folder):
         # Save the masked image
         output_file = os.path.join(output_folder, f'mask_{idx + 1}.png')
         cv2.imwrite(output_file, cropped_image)
+        
+        # Print coordinates of each segment and their file name
+        print(f"Segment {idx + 1}: Coordinates (x: {x}, y: {y}, width: {w}, height: {h}), File: {output_file}")
 
 # Main pipeline processing a folder of images
 def main_pipeline(input_folder, output_folder):
@@ -194,6 +199,6 @@ if __name__ == "__main__":
         print("No GPU available")
 
     print("Starting...")
-    input_folder = "C:\\Users\\Riley\\Desktop\\Portal\\Code\\Images"  # Update this path as needed
-    output_folder = "C:\\Users\\Riley\\Desktop\\SEGTESTINGFOLER_200ImageTest7"  # Update this path as needed
+    input_folder = "C:\\Users\\riley\\Desktop\\Code\\PythonForWork\\images"  # Update this path as needed
+    output_folder = "C:\\Users\\Riley\\Desktop\\TestingCords3"  # Update this path as needed
     main_pipeline(input_folder, output_folder)
