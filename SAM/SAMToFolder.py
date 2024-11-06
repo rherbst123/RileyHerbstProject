@@ -60,7 +60,7 @@ def initialize_sam():
         stability_score_thresh=0.90,  # Threshold for the stability score of the mask
         crop_n_layers=0,  # Number of layers to crop from the image
         crop_n_points_downscale_factor=2,  # Factor to downscale the number of points when cropping
-        min_mask_region_area=3500,  # Minimum area (in pixels) for a mask region to be considered valid  # Adjusted to ignore smaller regions
+        min_mask_region_area=4000,  # Minimum area (in pixels) for a mask region to be considered valid  # Adjusted to ignore smaller regions
     )
 
 # Segment the image
@@ -73,7 +73,14 @@ def generate_segmentation(image_path, mask_generator):
     if scale < 1:
         image = cv2.resize(image, (int(image.shape[1]*scale), int(image.shape[0]*scale)))
     masks = mask_generator.generate(image)
-    return masks, image
+    
+    # Filter out masks that are too big
+    image_area = image.shape[0] * image.shape[1]
+    max_mask_area = image_area * 0.8  # Adjust this value as needed
+    filtered_masks = [mask for mask in masks if mask['area'] < max_mask_area]
+    
+    return filtered_masks, image
+
 
 # Visualize segmentation results and save to file
 def visualize_and_save_segmentation(image, masks, output_folder):

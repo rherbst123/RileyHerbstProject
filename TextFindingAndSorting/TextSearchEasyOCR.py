@@ -45,6 +45,12 @@ for root, dirs, files in os.walk(base_folder):
                 os.remove(file_path)
                 continue
 
+            # Check if the word 'copyrighted' is in the detected text
+            if 'copyrighted' in text.lower():
+                print(f"The word 'copyrighted' detected in {filename}. Deleting...")
+                os.remove(file_path)
+                continue
+
             else:
                 print(f"{word_count} words detected in {filename}. Keeping the image.")
                         

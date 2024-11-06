@@ -1,6 +1,6 @@
 import easyocr
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageOps
 import os
 import math
 
@@ -8,15 +8,30 @@ import math
 reader = easyocr.Reader(['en'])  # You can add more language codes as needed
 
 # Folder containing the images and subfolders
-base_folder = "c:\\Users\\Riley\\Desktop\\SEGTESTINGFOLER_200ImageTest10-NoRuler"
+base_folder = "c:\\Users\\Riley\\Desktop\\SEGTESTINGFOLER_200ImageTest7-BlackBackground"
 
-def create_collage(image_paths, output_path, max_width=2000, background_color=(0, 0, 0)):
+#This Dont work!!!!!!!!!
+
+def create_neat_collage(image_paths, output_path, grid_size=(5, 5), image_size=(200, 200), padding=10, background_color=(0, 0, 0)):
+    """
+    Creates a collage with images arranged in a neat grid.
+
+    :param image_paths: List of image file paths.
+    :param output_path: File path to save the collage image.
+    :param grid_size: Tuple indicating the number of images in (columns, rows).
+    :param image_size: Tuple indicating the size to which each image will be resized.
+    :param padding: Space between images in pixels.
+    :param background_color: Background color of the collage.
+    """
+    cols, rows = grid_size
+    thumb_width, thumb_height = image_size
     images = []
 
-    # Load all images
+    # Load and resize images
     for image_path in image_paths:
         try:
             img = Image.open(image_path).convert('RGB')
+            img = img.resize((thumb_width, thumb_height), Image.Resampling.LANCZOS)  # Updated
             images.append(img)
         except Exception as e:
             print(f"Error processing image {image_path} for collage: {e}")
@@ -26,61 +41,30 @@ def create_collage(image_paths, output_path, max_width=2000, background_color=(0
         print("No images to create collage.")
         return
 
-    # Sort images by height (optional)
-    images.sort(key=lambda img: img.size[1])
-
-    # Initialize variables for arranging images
-    rows = []
-    current_row = []
-    current_width = 0
-    max_row_height = 0
-
-    for img in images:
-        img_width, img_height = img.size
-        if current_width + img_width <= max_width:
-            current_row.append(img)
-            current_width += img_width
-            max_row_height = max(max_row_height, img_height)
-        else:
-            rows.append((current_row, max_row_height))
-            current_row = [img]
-            current_width = img_width
-            max_row_height = img_height
-
-    if current_row:
-        rows.append((current_row, max_row_height))
-
     # Calculate collage dimensions
-    collage_width = max_width
-    collage_height = sum(height for (_, height) in rows)
+    collage_width = cols * thumb_width + (cols + 1) * padding
+    collage_height = rows * thumb_height + (rows + 1) * padding
 
     # Create the collage image
     collage_image = Image.new('RGB', (collage_width, collage_height), color=background_color)
 
     # Paste images into the collage
-    y_offset = 0
-    for row_images, row_height in rows:
-        x_offset = 0
-        for img in row_images:
-            collage_image.paste(img, (x_offset, y_offset))
-            x_offset += img.size[0]
-        y_offset += row_height
+    index = 0
+    for row in range(rows):
+        for col in range(cols):
+            if index >= len(images):
+                break
+            x = padding + col * (thumb_width + padding)
+            y = padding + row * (thumb_height + padding)
+            collage_image.paste(images[index], (x, y))
+            index += 1
 
-    collage_image = collage_image.crop(collage_image.getbbox())  # Crop to content
     collage_image.save(output_path)
     print(f"Collage saved to {output_path}")
 
-# Create the 'final collages' folder
-final_collages_folder = os.path.join(base_folder, 'final collages')
-os.makedirs(final_collages_folder, exist_ok=True)
-
 # Iterate over each file in the base folder
 for root, dirs, files in os.walk(base_folder):
-    # Exclude 'final collages' from processing
-    if 'final collages' in dirs:
-        print(f"Processing folder: {root}")
-        #dirs.remove('final collages')
-    #print(f"Processing folder: {root}")  # Print the current folder being processed
+    print(f"Processing folder: {root}")  # Print the current folder being processed
 
     kept_images = []  # List to store paths of images that are kept
 
@@ -106,7 +90,7 @@ for root, dirs, files in os.walk(base_folder):
             words = text.strip().split()
             word_count = len(words)
                 
-            if word_count < 3:
+            if word_count < 5:
                 print(f"Only {word_count} words detected in {filename}. Deleting...")
                 os.remove(file_path)
                 continue
@@ -126,6 +110,10 @@ for root, dirs, files in os.walk(base_folder):
 
     # After processing all files in the current folder, create a collage if there are kept images
     if kept_images:
-        folder_name = os.path.basename(root)
-        collage_output_path = os.path.join(final_collages_folder, f"{folder_name}_collage.png")
-        create_collage(kept_images, collage_output_path)
+        collage_output_path = os.path.join(root, f'collage_{len(kept_images)}.png')
+        # Adjust grid size based on the number of images
+        num_images = len(kept_images)
+        cols = min(5, num_images)  # Maximum 5 columns
+        rows = math.ceil(num_images / cols)
+        create_neat_collage(kept_images, collage_output_path, grid_size=(cols, rows))
+

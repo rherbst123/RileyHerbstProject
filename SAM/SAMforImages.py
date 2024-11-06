@@ -53,7 +53,7 @@ def initialize_sam():
     sam.to(device=device)
     return SamAutomaticMaskGenerator(
         sam,
-        points_per_side=8,  # Number of points to sample per side of the image
+        points_per_side=4,  # Number of points to sample per side of the image
         pred_iou_thresh=0.90,  # Threshold for the predicted Intersection over Union (IoU) score
         stability_score_thresh=0.95,  # Threshold for the stability score of the mask
         crop_n_layers=0,  # Number of layers to crop from the image
@@ -95,7 +95,7 @@ def crop_and_collage_largest_masks(image, masks, output_base_path):
     # Get the top 3 masks (or fewer if less are available)
     #TEST AROUND WITH THIS AND SEE WHAT WORKS BEST. BUT SEE IF YOU CAN DO MASKS THAT ONLY CONTAIN SOMETHING INSIDE OF THEM.
     #SOME MASKS ARE MADE AND ARE JUST A DIFFERENCE IN COLOR SO ITS NOT REALLY DOING ANYTHING.
-    top_masks = sorted_masks[:2]
+    top_masks = sorted_masks[:5]
 
     cropped_images = []
 
@@ -206,6 +206,6 @@ if __name__ == "__main__":
         print("No GPU available")
 
     print("Starting...")
-    input_folder = "c:\\Users\\Riley\\Desktop\\TestSet"  # Update this path as needed
-    output_folder = "C:\\Users\\Riley\\Desktop\\SEGTESTINGFOLER"  # Update this path as needed
+    input_folder = "C:\\Users\\Riley\\Desktop\\collagedimages"  # Update this path as needed
+    output_folder = "C:\\Users\\Riley\\Desktop\\segcollages"  # Update this path as needed
     main_pipeline(input_folder, output_folder)
