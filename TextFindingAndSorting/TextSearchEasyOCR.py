@@ -7,7 +7,7 @@ import os
 reader = easyocr.Reader(['en'])  # You can add more language codes as needed
 
 # Folder containing the images and subfolders
-base_folder = "c:\\Users\\Riley\\Desktop\\SEGTESTINGFOLER_200ImageTest7-EasyOCR-5Words"
+base_folder = "C:\\Users\\riley\\Desktop\\TestingCords2"
 
 # Iterate over each file in the base folder
 for root, dirs, files in os.walk(base_folder):
@@ -34,7 +34,7 @@ for root, dirs, files in os.walk(base_folder):
             words = text.strip().split()
             word_count = len(words)
                 
-            if word_count < 5:
+            if word_count < 4:
                 print(f"Only {word_count} words detected in {filename}. Deleting...")
                 os.remove(file_path)
                 continue

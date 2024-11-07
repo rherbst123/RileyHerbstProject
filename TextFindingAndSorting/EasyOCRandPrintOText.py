@@ -2,13 +2,12 @@ import easyocr
 import numpy as np
 from PIL import Image
 import os
-import math
 
 # Create an EasyOCR reader (specify the languages you want to read)
 reader = easyocr.Reader(['en'])  # You can add more language codes as needed
 
 # Folder containing the images and subfolders
-base_folder = "c:\\Users\\Riley\\Desktop\\SEGTESTINGFOLER_200ImageTest10-NoRuler"
+base_folder = "c:\\Users\\Riley\\Desktop\\SEGTESTINGFOLER_200ImageTest10-finer"
 
 def create_collage(image_paths, output_path, max_width=2000, background_color=(0, 0, 0)):
     images = []
@@ -70,17 +69,24 @@ def create_collage(image_paths, output_path, max_width=2000, background_color=(0
     collage_image.save(output_path)
     print(f"Collage saved to {output_path}")
 
-# Create the 'final collages' folder
-final_collages_folder = os.path.join(base_folder, 'final collages')
-os.makedirs(final_collages_folder, exist_ok=True)
+# Function to print words detected in each image and check for numeric percentage
+def print_and_check_words(words, filename):
+    print(f"Words detected in {filename}:")
+    num_numeric_words = 0
+    for word in words:
+        print(f"  - {word}")
+        if word.isnumeric():
+            num_numeric_words += 1
+
+    # Check if 90% or more words are numbers
+    if len(words) > 0 and (num_numeric_words / len(words)) >= 0.8:
+        print(f"Image {filename} has 90% or more numbers. Deleting...")
+        return True  # Signal to delete the image
+    return False
 
 # Iterate over each file in the base folder
 for root, dirs, files in os.walk(base_folder):
-    # Exclude 'final collages' from processing
-    if 'final collages' in dirs:
-        print(f"Processing folder: {root}")
-        #dirs.remove('final collages')
-    #print(f"Processing folder: {root}")  # Print the current folder being processed
+    print(f"Processing folder: {root}")  # Print the current folder being processed
 
     kept_images = []  # List to store paths of images that are kept
 
@@ -105,7 +111,12 @@ for root, dirs, files in os.walk(base_folder):
             # Split the text into words
             words = text.strip().split()
             word_count = len(words)
-                
+
+            # Print out the words and check if image has 90% numbers
+            if print_and_check_words(words, filename):
+                os.remove(file_path)
+                continue
+            
             if word_count < 3:
                 print(f"Only {word_count} words detected in {filename}. Deleting...")
                 os.remove(file_path)
@@ -126,6 +137,5 @@ for root, dirs, files in os.walk(base_folder):
 
     # After processing all files in the current folder, create a collage if there are kept images
     if kept_images:
-        folder_name = os.path.basename(root)
-        collage_output_path = os.path.join(final_collages_folder, f"{folder_name}_collage.png")
+        collage_output_path = os.path.join(root, 'collage.png')
         create_collage(kept_images, collage_output_path)
