@@ -8,7 +8,7 @@ import math
 reader = easyocr.Reader(['en'])  # You can add more language codes as needed
 
 # Folder containing the images and subfolders
-base_folder = "c:\\Users\\Riley\\Desktop\\SEGTESTINGFOLER_200ImageTest10-NoRuler"
+base_folder = "C:\\Users\\Riley\\Desktop\\FilteringTest8"
 
 def create_collage(image_paths, output_path, max_width=2000, background_color=(0, 0, 0)):
     images = []
