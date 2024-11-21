@@ -42,40 +42,26 @@ def resource_monitor(pbar, stop_event, pbar_lock):
             pbar.set_postfix_str(resource_usage)
         time.sleep(1)
 
-# Function to log SAM parameters and execution time
-# Function to log SAM parameters and execution time
-def log_test_details(output_folder, parameters, execution_time):
-    try:
-        log_file = os.path.join(output_folder, "test_log.txt")
-        os.makedirs(output_folder, exist_ok=True)  # Ensure the folder exists
-        with open(log_file, "a") as file:  # Use append mode to avoid overwriting
-            file.write("Segment Anything Model (SAM) Parameters:\n")
-            for key, value in parameters.items():
-                file.write(f"{key}: {value}\n")
-            file.write("\n")
-            file.write(f"Execution Time: {execution_time:.2f} seconds\n\n")
-        print(f"Test details successfully logged in {log_file}")
-    except Exception as e:
-        print(f"Error writing log file: {e}")
+
 
 
 
 # Load the Segment Anything Model
 def initialize_sam():
-    sam_checkpoint = "c:\\Users\\Riley\\Desktop\\sam_vit_l_0b3195.pth"  # Update this path as needed
-    model_type = "vit_l"
+    sam_checkpoint = "c:\\Users\\Riley\\Desktop\\sam_vit_h_4b8939.pth"  # Update this path as needed
+    model_type = "vit_h"
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
     sam = sam_model_registry[model_type](checkpoint=sam_checkpoint)
     sam.to(device=device)
     return SamAutomaticMaskGenerator(
         sam,
-        points_per_side=18,  # Increased from 10 to 14
-        pred_iou_thresh=0.86,  # Slightly lowered to allow more masks
-        stability_score_thresh=0.86,  # Slightly lowered
+        points_per_side=16,  # Increased from 10 to 14
+        pred_iou_thresh=0.88,  # Slightly lowered to allow more masks
+        stability_score_thresh=0.88,  # Slightly lowered
         crop_n_layers=0,
         crop_n_points_downscale_factor=2,
-        min_mask_region_area=1100,  # Lowered from 4000 to 1000 to include smaller regions
+        min_mask_region_area=2500,  # Lowered from 4000 to 1000 to include smaller regions
     )
 
 def process_quadrants(image, mask_generator):
@@ -320,6 +306,6 @@ if __name__ == "__main__":
         print("No GPU available")
 
     print("Starting...")
-    input_folder = "C:\\Users\\Riley\\Desktop\\Portal\\Code\\10Images"  # Update this path as needed
-    output_folder = "C:\\Users\\Riley\\Desktop\\FilteringTest9"  # Update this path as needed
+    input_folder = "C:\\Users\\Riley\\Desktop\\Portal\\Code\\Images"  # Update this path as needed
+    output_folder = "C:\\Users\\Riley\\Desktop\\BigTest"  # Update this path as needed
     main_pipeline(input_folder, output_folder)
