@@ -4,6 +4,9 @@ from PIL import Image
 import os
 import math
 
+
+#This is the most stable EasyOCR processing 
+
 # Create an EasyOCR reader (specify the languages you want to read)
 reader = easyocr.Reader(['en'])  # You can add more language codes as needed
 

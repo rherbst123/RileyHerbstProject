@@ -189,6 +189,6 @@ def main_pipeline(input_folder, output_folder):
 
 
 if __name__ == "__main__":
-    input_folder = "C:\\Users\\Riley\\Desktop\\Portal\\Code\\10Images"
-    output_folder = "C:\\Users\\Riley\\Desktop\\FilteringTest12"
+    input_folder = "C:\\Users\\Riley\\Desktop\\Portal\\Code\\Images"
+    output_folder = "C:\\Users\\Riley\\Desktop\\BigTest1"
     main_pipeline(input_folder, output_folder)
