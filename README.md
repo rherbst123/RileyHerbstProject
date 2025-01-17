@@ -15,4 +15,5 @@
 
 - Oct 14th, Detectron introduction and finding out ease of finetuning. 
 
+
 ****
