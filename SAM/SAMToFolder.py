@@ -47,8 +47,8 @@ def resource_monitor(pbar, stop_event, pbar_lock):
 
 # Load the Segment Anything Model
 def initialize_sam():
-    sam_checkpoint = "C:\\Users\\riley\\Desktop\\Code\\sam_vit_b_01ec64.pth"  # Update this path as needed
-    model_type = "vit_b"
+    sam_checkpoint = "C:\\Users\\riley\\Desktop\\sam_vit_h_4b8939.pth"  # Update this path as needed
+    model_type = "vit_h"
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
     sam = sam_model_registry[model_type](checkpoint=sam_checkpoint)
@@ -206,6 +206,6 @@ if __name__ == "__main__":
         print("No GPU available")
 
     print("Starting...")
-    input_folder = "C:\\Users\\riley\\Desktop\\Code\\PythonForWork\\images"  # Update this path as needed
-    output_folder = "C:\\Users\\Riley\\Desktop\\TestingCords3"  # Update this path as needed
+    input_folder = "C:\\Users\\riley\\Desktop\\CheddarEdits"  # Update this path as needed
+    output_folder = "C:\\Users\\Riley\\Desktop\\CheddarEdits\\Segmented"  # Update this path as needed
     main_pipeline(input_folder, output_folder)
