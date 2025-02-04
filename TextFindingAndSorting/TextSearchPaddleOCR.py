@@ -2,7 +2,7 @@ import os
 from paddleocr import PaddleOCR
 from PIL import Image
 
-#This Script sucks and so does paddle in this case i guess. probably me tho
+#Paddle OCR is not suited for this application
 
 
 # Initialize PaddleOCR with English language support

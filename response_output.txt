@@ -1,0 +1,24 @@
+1. verbatimCollectors: John J. Engel, Matt von Konrat & John E. Braggins
+2. collectedBy: J. Engel
+3. secondaryCollectors: M. von Konrat, J. E. Braggins
+4. recordNumber: 23773
+5. verbatimEventDate: 12 February 2003
+6. minimumEventDate: 2003-02-12
+7. maximumEventDate: 2003-02-12
+8. verbatimIdentification: Telaranea lindenbegii var. papillata Engel & Merr.
+9. latestScientificName: Telaranea lindenbegii var. papillata Engel & Merr.
+10. identifiedBy: J. Engel, M. von Konrat, J. E. Braggins
+11. verbatimDateIdentified: 12 February 2003
+12. associatedTaxa: Blechnum novae-zelandiae, Weinmannia and Dicksonia squarrosa, Leptospermum scoparium
+13. country: New Zealand
+14. firstPoliticalUnit: North Island
+15. secondPoliticalUnit: Auckland Province
+16. municipality: N/A
+17. verbatimLocality: Whareorino Forest, start of track to Leitch's Hut
+18. locality: Whareorino Forest, start of track to Leitch's Hut
+19. habitat: Clay banks
+20. verbatimElevation: 280 m
+21. verbatimCoordinates: 38° 24' 5'' S, 174° 49' 8'' E
+22. otherCatalogNumbers: 1173554
+23. originalMethod: Handwritten
+24. typeStatus: holotype

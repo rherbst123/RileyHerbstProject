@@ -6,12 +6,13 @@ import math
 
 
 #This is the most stable EasyOCR processing 
+#This is the pipeline we will use for production
 
 # Create an EasyOCR reader (specify the languages you want to read)
 reader = easyocr.Reader(['en'])  # You can add more language codes as needed
 
 # Folder containing the images and subfolders
-base_folder = "C:\\Users\\Riley\\Desktop\\FilteringTest8"
+base_folder = "C:\\Users\\Riley\\Desktop\\BaseSet-2-Cleaned\\Segmented"
 
 def create_collage(image_paths, output_path, max_width=2000, background_color=(0, 0, 0)):
     images = []
@@ -115,8 +116,19 @@ for root, dirs, files in os.walk(base_folder):
                 continue
 
             # If the resolution is higher than 2000x2000, delete the image
-            if width > 2000 or height > 2000:
+            if width > 800 and height > 1500:
                 print(f"Image {filename} has a resolution of {width}x{height}. Deleting...")
+                os.remove(file_path)
+                continue
+
+            # If the height is 4 times as large as the width, delete the image
+            if height >= 4 * width:
+                print(f"Image {filename} has a height {height} that is 4 times as large as its width {width}. Deleting...")
+                os.remove(file_path)
+                continue
+             
+            if width >= 4 * height:
+                print(f"Image {filename} has a height {width} that is 4 times as large as its width {height}. Deleting...")
                 os.remove(file_path)
                 continue
 

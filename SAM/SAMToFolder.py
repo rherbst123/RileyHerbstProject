@@ -55,12 +55,12 @@ def initialize_sam():
     sam.to(device=device)
     return SamAutomaticMaskGenerator(
         sam,
-        points_per_side=10,  # Number of points to sample per side of the image
-        pred_iou_thresh=0.90,  # Threshold for the predicted Intersection over Union (IoU) score
-        stability_score_thresh=0.90,  # Threshold for the stability score of the mask
-        crop_n_layers=0,  # Number of layers to crop from the image
-        crop_n_points_downscale_factor=2,  # Factor to downscale the number of points when cropping
-        min_mask_region_area=4000,  # Minimum area (in pixels) for a mask region to be considered valid  # Adjusted to ignore smaller regions
+        points_per_side=18,  # Number of points to sample per side of the image
+        pred_iou_thresh=0.94,  # Threshold for the predicted Intersection over Union (IoU) score
+        stability_score_thresh=0.95,  # Threshold for the stability score of the mask
+        crop_n_layers=2,  # Number of layers to crop from the image
+        crop_n_points_downscale_factor=1.2,  # Factor to downscale the number of points when cropping
+        min_mask_region_area=3000,  # Minimum area (in pixels) for a mask region to be considered valid  # Adjusted to ignore smaller regions
     )
 
 # Segment the image
@@ -206,6 +206,6 @@ if __name__ == "__main__":
         print("No GPU available")
 
     print("Starting...")
-    input_folder = "C:\\Users\\riley\\Desktop\\CheddarEdits"  # Update this path as needed
-    output_folder = "C:\\Users\\Riley\\Desktop\\CheddarEdits\\Segmented"  # Update this path as needed
+    input_folder = "C:\\Users\\riley\\Desktop\\BaseSet-1"  # Update this path as needed
+    output_folder = "C:\\Users\\Riley\\Desktop\\BaseSet-3\\Segmented"  # Update this path as needed
     main_pipeline(input_folder, output_folder)
