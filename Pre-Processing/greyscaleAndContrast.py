@@ -14,19 +14,16 @@ def process_image(image_path, output_path):
     
     hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
     
-    # Lower gamma by 20%
     gamma = 0.9
     inv_gamma = 1.0 / gamma
     table = [((i / 255.0) ** inv_gamma) * 255 for i in range(256)]
     table = np.array(table, np.uint8)
     hsv_image[:, :, 2] = cv2.LUT(hsv_image[:, :, 2], table)
     
-    #Saturation params. 1.5 times the sat
     hsv_image[:, :, 1] = cv2.multiply(hsv_image[:, :, 1], 0.4)
     
     saturated_image = cv2.cvtColor(hsv_image, cv2.COLOR_HSV2BGR)
     
-    #greyscale
     grey_image = cv2.cvtColor(saturated_image, cv2.COLOR_BGR2GRAY)
     
     cv2.imwrite(output_path, grey_image)
