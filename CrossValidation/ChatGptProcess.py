@@ -11,8 +11,7 @@ import time
 #THIS ITERATION WAS MADE ON 2-27-24#
 #Put all filepaths in double quotes
 # OpenAI API Key
-api_key = "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"
-
+api_key = ""
 #FilePath for textfile containing prompt
 prompt_file_path = "C:\\Users\\riley\\Desktop\\Code\\Prompt 1.0.txt"
 
