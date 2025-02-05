@@ -28,4 +28,6 @@
 ****
 ### Second Semester:
 
-Jan 21st, Start Cross validation pipeline with three models, discuss AWS 
+Jan 21st, Start Cross validation pipeline with three models, discuss AWS
+
+Jan 30th, Layout algorithm for cross validation of 5 models. Claude, Gpt, Llama3.2V-ision, Amazon-Nova-Pro, 
