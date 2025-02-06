@@ -23,4 +23,5 @@ for image_path in image_files:
   )
   print(f"Image: {image_path}")
   print(response.message.content)
+  print("="*50)
   print()
