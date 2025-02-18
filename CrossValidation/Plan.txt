@@ -1,4 +1,5 @@
-CrossValidation Plan: Run 5 models in parallel. Models in clclude "Ollama 3.2 Vision 11b", "Chat GPT-4o", "Claude 3.5 Sonnet v2", "Google Gemini Pro", "Aws Nova-Pro". 
+CrossValidation Plan: Run 5 models in parallel. Models in clclude "Ollama 3.2 Vision 11b", "Chat GPT-4o", "Claude 3.5 Sonnet v2", "Google Gemini 2.0 Pro", "Aws Nova-Pro". 
 Next, using prompt and scripts standardize outputs to trim white space. Using Exact or tunable fuzzy  match (using rapidfuzz) compare all 5 models. 
 Iterate through each 5 entries and go field for field comparing each entry. Each time aa comparison is made a score is given with the format (X/5) with X being the number
 of models in agreement of a perfect match of fuzzy match specified.
+Fields that are not matching: seperate out and re run segment. 

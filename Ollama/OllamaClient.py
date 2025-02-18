@@ -2,7 +2,7 @@ from ollama import chat
 import os
 
 
-prompt = "Prompts/Prompt 1.5.txt"
+prompt = "Prompts/Prompt_1.5_Ollama.txt"
 # Read the prompt from input.txt
 with open(prompt, 'r', encoding="utf-8") as file:
   prompt = file.read().strip()
@@ -12,7 +12,7 @@ image_files = [os.path.join(folder_path, f) for f in os.listdir(folder_path) if 
 
 for image_path in image_files:
   response = chat(
-    model='llama3.2-vision',
+    model='llama3.2-vision:11b',
     messages=[
       {
         'role': 'user',
@@ -21,7 +21,7 @@ for image_path in image_files:
       }
     ],
   )
-  print(f"Image: {image_path}")
-  print(response.message.content)
-  print("="*50)
-  print()
+  with open("C:\\Users\\riley\\Documents\\GitHub\\RileyHerbstProject\\Outputs\\OllamaClient2_8_25_0403.txt", "a", encoding="utf-8") as output_file:
+    output_file.write(f"Image: {image_path}\n")
+    output_file.write(response.message.content + "\n")
+    output_file.write("="*50 + "\n\n")
