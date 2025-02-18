@@ -56,3 +56,4 @@ for root, dirs, files in os.walk(base_folder):
                         
         except Exception as e:
             print(f"Error processing {filename}: {e}")
+            

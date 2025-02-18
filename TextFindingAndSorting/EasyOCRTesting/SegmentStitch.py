@@ -5,6 +5,8 @@ import os
 import math
 
 
+
+
 #This is the most stable EasyOCR processing 
 #This is the pipeline we will use for production
 
@@ -12,7 +14,7 @@ import math
 reader = easyocr.Reader(['en'])  # You can add more language codes as needed
 
 # Folder containing the images and subfolders
-base_folder = "C:\\Users\\Riley\\Desktop\\BaseSet-2-Cleaned\\Segmented"
+base_folder = "C:\\Users\\Riley\\Desktop\\300Images-Seg-Cleaned\\Segmented"
 
 def create_collage(image_paths, output_path, max_width=2000, background_color=(0, 0, 0)):
     images = []
@@ -54,14 +56,13 @@ def create_collage(image_paths, output_path, max_width=2000, background_color=(0
     if current_row:
         rows.append((current_row, max_row_height))
 
-    # Calculate collage dimensions
     collage_width = max_width
     collage_height = sum(height for (_, height) in rows)
 
-    # Create the collage image
+
     collage_image = Image.new('RGB', (collage_width, collage_height), color=background_color)
 
-    # Paste images into the collage
+
     y_offset = 0
     for row_images, row_height in rows:
         x_offset = 0
@@ -122,12 +123,12 @@ for root, dirs, files in os.walk(base_folder):
                 continue
 
             # If the height is 4 times as large as the width, delete the image
-            if height >= 4 * width:
+            if height >= 4.7 * width:
                 print(f"Image {filename} has a height {height} that is 4 times as large as its width {width}. Deleting...")
                 os.remove(file_path)
                 continue
              
-            if width >= 4 * height:
+            if width >= 4.7 * height:
                 print(f"Image {filename} has a height {width} that is 4 times as large as its width {height}. Deleting...")
                 os.remove(file_path)
                 continue

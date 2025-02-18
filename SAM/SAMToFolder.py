@@ -15,16 +15,14 @@ import os
 
 #This script outputs each image into its own folder containig   the segmentation visualization and the cropped masks
 # As of 10.8.24 I am using Python 3.12.7 with CUDA 11.8 and Torch 2.4.1.
-# Results may vary or may not work depending on your packages.
 
-# Function to get resource usage
+
+
 def get_resource_usage():
     # Get CPU usage
     cpu_percent = psutil.cpu_percent()
-    # Get memory usage
     memory = psutil.virtual_memory()
     memory_percent = memory.percent
-    # Get GPU usage
     gpus = GPUtil.getGPUs()
     if gpus:
         gpu = gpus[0]
@@ -49,21 +47,21 @@ def resource_monitor(pbar, stop_event, pbar_lock):
 def initialize_sam():
     sam_checkpoint = "C:\\Users\\riley\\Desktop\\sam_vit_h_4b8939.pth"  # Update this path as needed
     model_type = "vit_h"
-    device = "cuda" if torch.cuda.is_available() else "cpu"
+    device = "cuda" #if torch.cuda.is_available() else "cpu"
 
     sam = sam_model_registry[model_type](checkpoint=sam_checkpoint)
     sam.to(device=device)
     return SamAutomaticMaskGenerator(
         sam,
-        points_per_side=18,  # Number of points to sample per side of the image
-        pred_iou_thresh=0.94,  # Threshold for the predicted Intersection over Union (IoU) score
-        stability_score_thresh=0.95,  # Threshold for the stability score of the mask
-        crop_n_layers=2,  # Number of layers to crop from the image
-        crop_n_points_downscale_factor=1.2,  # Factor to downscale the number of points when cropping
-        min_mask_region_area=3000,  # Minimum area (in pixels) for a mask region to be considered valid  # Adjusted to ignore smaller regions
+        points_per_side=24,  # Number of points to sample per side of the image
+        pred_iou_thresh=0.97,  # Threshold for the predicted Intersection over Union (IoU) score
+        stability_score_thresh=0.90,  # Threshold for the stability score of the mask
+        crop_n_layers=0,  # Number of layers to crop from the image
+        crop_n_points_downscale_factor=0.7,  # Factor to downscale the number of points when cropping
+        min_mask_region_area=2700,  # Minimum area (in pixels) for a mask region to be considered valid  # Adjusted to ignore smaller regions
     )
 
-# Segment the image
+# Segment the images
 def generate_segmentation(image_path, mask_generator):
     image = cv2.imread(image_path)
     if image is None:
@@ -132,6 +130,8 @@ def crop_and_save_masks(image, masks, output_folder):
         # Print coordinates of each segment and their file name
         print(f"Segment {idx + 1}: Coordinates (x: {x}, y: {y}, width: {w}, height: {h}), File: {output_file}")
 
+
+
 # Main pipeline processing a folder of images
 def main_pipeline(input_folder, output_folder):
     # Get list of image files in the input folder
@@ -162,7 +162,9 @@ def main_pipeline(input_folder, output_folder):
             for image_file in image_files:
                 image_path = os.path.join(input_folder, image_file)
 
-                # Create a folder for this image in the output folder
+                masks, image = generate_segmentation(image_path, mask_generator)
+        
+                
                 image_folder_name = os.path.splitext(image_file)[0]
                 image_output_folder = os.path.join(output_folder, image_folder_name)
                 os.makedirs(image_output_folder, exist_ok=True)
@@ -206,6 +208,6 @@ if __name__ == "__main__":
         print("No GPU available")
 
     print("Starting...")
-    input_folder = "C:\\Users\\riley\\Desktop\\BaseSet-1"  # Update this path as needed
-    output_folder = "C:\\Users\\Riley\\Desktop\\BaseSet-3\\Segmented"  # Update this path as needed
+    input_folder = "C:\\Users\\riley\\Desktop\\300Images"  # Update this path as needed
+    output_folder = "C:\\Users\\Riley\\Desktop\\300Images-Seg\\Segmented"  # Update this path as needed
     main_pipeline(input_folder, output_folder)
