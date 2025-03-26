@@ -7,18 +7,18 @@ minimumEventDate: 2003-02-12
 maximumEventDate: 2003-02-12
 verbatimIdentification: Telaranea lindenbegii var. papillata Engel & Merr.
 latestScientificName: Telaranea lindenbegii var. papillata Engel & Merr.
- identifiedBy: J. Engel, M. von Konrat, J. E. Braggins
- verbatimDateIdentified: 12 February 2003
- associatedTaxa: Blechnum novae-zelandiae, Weinmannia and Dicksonia squarrosa, Leptospermum scoparium
- country: New Zealand
- firstPoliticalUnit: North Island
- secondPoliticalUnit: Auckland Province
- municipality: N/A
- verbatimLocality: Whareorino Forest, start of track to Leitch's Hut
- locality: Whareorino Forest, start of track to Leitch's Hut
- habitat: Clay banks
- verbatimElevation: 280 m
- verbatimCoordinates: 38 24' 5'' S, 174 49' 8'' E
- otherCatalogNumbers: 1173554
- originalMethod: Handwritten
- typeStatus: holotype
+identifiedBy: J. Engel, M. von Konrat, J. E. Braggins
+verbatimDateIdentified: 12 February 2003
+associatedTaxa: Blechnum novae-zelandiae, Weinmannia and Dicksonia squarrosa, Leptospermum scoparium
+country: New Zealand
+firstPoliticalUnit: North Island
+secondPoliticalUnit: Auckland Province
+municipality: N/A
+verbatimLocality: Whareorino Forest, start of track to Leitch's Hut
+locality: Whareorino Forest, start of track to Leitch's Hut
+habitat: Clay banks
+verbatimElevation: 280 m
+verbatimCoordinates: 38 24' 5'' S, 174 49' 8'' E
+otherCatalogNumbers: 1173554
+originalMethod: Handwritten
+typeStatus: holotype

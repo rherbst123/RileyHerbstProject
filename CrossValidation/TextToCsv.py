@@ -1,124 +1,79 @@
-import os
 import csv
 import re
 
-def parse_local_images(text):
-    """
-    Given the full text of a single .txt file, split it into blocks
-    that start with 'Local Image' or are separated by lines of '=' chars.
-    Then parse each block's lines as key-value pairs.
-    Returns a list of dictionaries: one for each 'Local Image'.
-    """
-    # Split on the "Local Image" lines for a rough segmentation
-    # You might also want to split on '===' or combine both approaches.
-    # This example tries to be forgiving by matching lines that start with "Local Image".
-    blocks = re.split(r'(?:^|\n)(Local Image.*?)(?=\nLocal Image|\n?$)', text, flags=re.DOTALL)
+def extract_info_from_text(text):
+    regex_patterns = {
+        'Image Name': r"Image Name:\s*(.+?)\n",
+        'verbatimCollectors': r"verbatimCollectors\s*:\s*(.+?)\n",
+        'collectedBy': r"collectedBy\s*:\s*(.+?)\n",
+        'secondaryCollectors': r"secondaryCollectors\s*:\s*(.+?)\n",
+        'recordNumber': r"recordNumber\s*:\s*(.+?)\n",
+        'verbatimEventDate': r"verbatimEventDate\s*:\s*(.+?)\n",
+        'minimumEventDate': r"minimumEventDate\s*:\s*(.+?)\n",
+        'maximumEventDate': r"maximumEventDate\s*:\s*(.+?)\n",
+        'verbatimIdentification': r"verbatimIdentification\s*:\s*(.+?)\n",
+        'latestScientificName': r"latestScientificName\s*:\s*(.+?)\n",
+        'identifiedBy': r"identifiedBy\s*:\s*(.+?)\n",
+        'verbatimDateIdentified': r"verbatimDateIdentified\s*:\s*(.+?)\n",
+        'associatedTaxa': r"associatedTaxa\s*:\s*(.+?)\n",
+        'country': r"country\s*:\s*(.+?)\n",
+        'firstPoliticalUnit': r"firstPoliticalUnit\s*:\s*(.+?)\n",
+        'secondPoliticalUnit': r"secondPoliticalUnit\s*:\s*(.+?)\n",
+        'municipality': r"municipality\s*:\s*(.+?)\n",
+        'verbatimLocality': r"verbatimLocality\s*:\s*(.+?)\n",
+        'locality': r"locality\s*:\s*(.+?)\n",
+        'habitat': r"habitat\s*:\s*(.+?)\n",
+        'substrate': r"substrate\s*:\s*(.+?)\n",
+        'verbatimElevation': r"verbatimElevation\s*:\s*(.+?)\n",
+        'verbatimCoordinates': r"verbatimCoordinates\s*:\s*(.+?)\n",
+        'otherCatalogNumbers': r"otherCatalogNumbers\s*:\s*(.+?)\n",
+        'originalMethod': r"originalMethod\s*:\s*(.+?)\n",
+        'typeStatus': r"typeStatus\s*:\s*(.+?)\n",
+        'URL': r"URL:\s*(.+?)\n",
+    }
 
-    records = []
-    current_record = {}
+    result = {}
+    for key, pattern in regex_patterns.items():
+        match = re.search(pattern, text)
+        result[key] = match.group(1) if match else ''
 
-    # Because of how re.split with capturing groups works, blocks can come in pairs:
-    #   [ '', 'Local Image 1\nFilename: ...', 'Some text', 'Local Image 2\nFilename: ...', '...' ]
-    # We will merge each "heading" piece with the piece that follows it to get a single "block".
-    def parse_block(block):
-        """
-        Parse lines in a block for 'key: value' format and return a dict.
-        """
-        record = {}
-        lines = block.splitlines()
-        for line in lines:
-            line = line.strip()
-            # Skip empty lines
-            if not line:
-                continue
-            # Attempt to match lines like "key: value"
-            if ':' in line:
-                # Split once at the first colon (some data might contain extra colons)
-                key, val = line.split(':', 1)
-                key = key.strip()
-                val = val.strip()
-                record[key] = val
-        return record
+    return result
 
-    # Combine the heading with the next block to parse them together
-    # so we don’t lose the “Local Image X” or “Filename: ...” lines.
-    # The first piece could be empty if the file starts with "Local Image..."
-    i = 0
-    while i < len(blocks):
-        block_heading = blocks[i].strip()
-        # If there is another chunk, combine them. Otherwise parse just the one.
-        if i + 1 < len(blocks):
-            block_content = block_heading + "\n" + blocks[i+1]
-            i += 2
-        else:
-            block_content = block_heading
-            i += 1
+def process_file(file_path):
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            contents = file.read()
+    except FileNotFoundError:
+        print(f"Error: File '{file_path}' not found.")
+        return []
 
-        # Filter out truly empty text
-        if block_content.strip():
-            record = parse_block(block_content)
-            # Only add to list if there's meaningful data
-            if record:
-                records.append(record)
+    entries = re.split(r'Image Name: ', contents)[1:]
 
-    return records
+    data = []
+    for entry in entries:
+        entry_info = extract_info_from_text('Image Name: ' + entry)
+        data.append(entry_info)
 
-def write_csv(records, output_csv):
-    """
-    Given a list of dictionaries (records) and a path to an output CSV,
-    write all records as rows in the CSV. Use union of all keys to form columns.
-    """
-    # Gather all field names from the union of all record keys
-    all_keys = set()
-    for rec in records:
-        all_keys.update(rec.keys())
-    fieldnames = sorted(all_keys)
+    return data
 
-    with open(output_csv, mode='w', newline='', encoding='utf-8') as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
+def export_to_csv(data, csv_file_path):
+    if not data:
+        print("No data to write to CSV.")
+        return
+
+    fields = list(data[0].keys())
+    with open(csv_file_path, 'w', newline='', encoding='utf-8') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=fields)
         writer.writeheader()
-        for rec in records:
-            writer.writerow(rec)
-
-def process_txt_file(input_path, output_path):
-    """
-    Parse a single text file and write its corresponding CSV to output_path.
-    """
-    with open(input_path, 'r', encoding='utf-8') as f:
-        text = f.read()
-
-    # Parse local images from the text
-    records = parse_local_images(text)
-    # Write out CSV
-    write_csv(records, output_path)
-
-
-def main(input_folder, output_folder):
-    """
-    For every .txt file in 'input_folder', parse it and produce
-    a matching CSV in 'output_folder'.
-    """
-    # Ensure output folder exists
-    os.makedirs(output_folder, exist_ok=True)
-
-    # Process each .txt file
-    for filename in os.listdir(input_folder):
-        if filename.lower().endswith('.txt'):
-            input_path = os.path.join(input_folder, filename)
-            # Construct CSV filename by replacing '.txt' with '.csv'
-            csv_filename = os.path.splitext(filename)[0] + '.csv'
-            output_path = os.path.join(output_folder, csv_filename)
-
-            print(f"Processing {filename} -> {csv_filename}")
-            process_txt_file(input_path, output_path)
+        writer.writerows(data)
 
 
 if __name__ == "__main__":
-    # Example usage:
-    # 1) Create an 'input_texts' folder containing the .txt files
-    # 2) Create an 'output_csvs' folder for the CSVs
-    # 3) Run: python parse_texts_to_csv.py
+    input_file_path = "input.txt"
+    output_csv_file_path = "output.csv"
 
-    input_folder = "C:\\Users\\Riley\\Desktop\\InputText"   # Adjust as needed
-    output_folder = "C:\\Users\\Riley\\Desktop\\InputText\\OutputCsv"  # Adjust as needed
-    main(input_folder, output_folder)
+    extracted_data = process_file(input_file_path)
+    if extracted_data:
+        export_to_csv(extracted_data, output_csv_file_path)
+        print(f"Data exported to '{output_csv_file_path}'.")
+        print("All Done!")

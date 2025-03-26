@@ -45,9 +45,9 @@ def resource_monitor(pbar, stop_event, pbar_lock):
 
 # Load the Segment Anything Model
 def initialize_sam():
-    sam_checkpoint = "C:\\Users\\riley\\Desktop\\sam_vit_h_4b8939.pth"  # Update this path as needed
+    sam_checkpoint = "C:\\Users\\riley\\Desktop\\sam_vit_h_4b8939.pth"  
     model_type = "vit_h"
-    device = "cuda" #if torch.cuda.is_available() else "cpu"
+    device = "cuda" 
 
     sam = sam_model_registry[model_type](checkpoint=sam_checkpoint)
     sam.to(device=device)
@@ -58,7 +58,7 @@ def initialize_sam():
         stability_score_thresh=0.90,  # Threshold for the stability score of the mask
         crop_n_layers=0,  # Number of layers to crop from the image
         crop_n_points_downscale_factor=0.7,  # Factor to downscale the number of points when cropping
-        min_mask_region_area=2700,  # Minimum area (in pixels) for a mask region to be considered valid  # Adjusted to ignore smaller regions
+        min_mask_region_area=2700,  # Minimum area (in pixels) for a mask region to be considered valid 
     )
 
 # Segment the images
@@ -74,7 +74,7 @@ def generate_segmentation(image_path, mask_generator):
     
     # Filter out masks that are too big
     image_area = image.shape[0] * image.shape[1]
-    max_mask_area = image_area * 0.8  # Adjust this value as needed
+    max_mask_area = image_area * 0.8  # look at 80% of image are as segments would be too large
     filtered_masks = [mask for mask in masks if mask['area'] < max_mask_area]
     
     return filtered_masks, image
