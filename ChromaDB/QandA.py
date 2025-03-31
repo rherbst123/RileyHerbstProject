@@ -3,10 +3,10 @@ import chromadb
 from sentence_transformers import SentenceTransformer
 from chromadb.config import Settings
 
-collection = "ChromaDB/Data"
+
 
 # Directory where your persistent Chroma DB is stored
-PERSIST_DIR = "./chroma_db"
+PERSIST_DIR = "./chromadb/bmae-json"
 
 # Load the SentenceTransformer model for embeddings
 model = SentenceTransformer("all-mpnet-base-v2")

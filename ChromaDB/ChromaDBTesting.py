@@ -1,28 +1,35 @@
+import os
+import jq
+from dotenv import load_dotenv
+from langchain_community.document_loaders import JSONLoader
+from langchain_openai import OpenAIEmbeddings
+from langchain_chroma import Chroma
 import chromadb
-import json
-# setup Chroma in-memory, for easy prototyping. Can add persistence easily!
-client = chromadb.Client()
 
-# Create collection. get_collection, get_or_create_collection, delete_collection also available!
-collection = client.create_collection("all-my-documents")
 
-# Add docs to the collection. Can also update and delete. Row-based API coming soon!
-# Load documents from JSON files
-with open('ChromaDB/Data/C0000578F.json', 'r') as f:
-    document1 = json.load(f)
-# with open('document2.json', 'r') as f:
-#     document2 = json.load(f)
+load_dotenv()
 
-collection.add(
-    documents=[document1['text']], # assuming the JSON has a 'text' field
-    metadatas=[document1['metadata']], # assuming the JSON has a 'metadata' field
-    ids=[document1['id']], # assuming the JSON has an 'id' field
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
+
+file_path = "C://Users//Riley//Documents//GitHub//RileyHerbstProject//ChromaDB//Data//8.18.24Test.json"
+collection_name = "testing"
+
+loader = JSONLoader(file_path=file_path, jq_schema=".[]", text_content=False)
+documents = loader.load()
+
+embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
+
+persistent_client = chromadb.PersistentClient()
+collection = persistent_client.get_or_create_collection(collection_name)
+langchain_chroma = Chroma(
+    client=persistent_client,
+    collection_name=collection_name,
+    embedding_function=embeddings,
 )
 
-# Query/search 2 most similar results. You can also .get by id
-results = collection.query(
-    query_texts=["This is a query document"],
-    n_results=2,
-    # where={"metadata_field": "is_equal_to_this"}, # optional filter
-    # where_document={"$contains":"search_string"}  # optional filter
-)
+db = Chroma.from_documents(documents, embeddings, persist_directory="./chromadb/bmae-json")
+
+query = "specimen with record number 68-1644"
+results = db.similarity_search(query)
+
+print(results)

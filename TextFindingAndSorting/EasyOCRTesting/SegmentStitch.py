@@ -79,7 +79,9 @@ def create_collage(image_paths, output_path, max_width=2000, background_color=(0
 final_collages_folder = os.path.join(base_folder, 'final collages')
 os.makedirs(final_collages_folder, exist_ok=True)
 
-# Iterate over each file in the base folder
+
+
+# image size weeeeeeeding out
 for root, dirs, files in os.walk(base_folder):
     # Exclude 'final collages' from processing
     if 'final collages' in dirs:
