@@ -208,6 +208,6 @@ if __name__ == "__main__":
         print("No GPU available")
 
     print("Starting...")
-    input_folder = "C:\\Users\\riley\\Desktop\\300Images"  # Update this path as needed
-    output_folder = "C:\\Users\\Riley\\Desktop\\300Images-Seg\\Segmented"  # Update this path as needed
+    input_folder = "C:\\Users\\riley\\Desktop\\6Images"  # Update this path as needed
+    output_folder = "C:\\Users\\Riley\\Desktop\\6ImagesSeg\\Segmented"  # Update this path as needed
     main_pipeline(input_folder, output_folder)
