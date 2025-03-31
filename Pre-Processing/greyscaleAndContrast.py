@@ -2,7 +2,7 @@ import cv2
 import os
 import numpy as np
 
-input_dir = "C:\\Users\\riley\\Desktop\\Processed"
+input_dir = "C:\\Users\\riley\\Desktop\\6Images"
 output_dir = os.path.join(input_dir, 'ProcessedImages') #makes new folder in OG folder
 
 if not os.path.exists(output_dir):
