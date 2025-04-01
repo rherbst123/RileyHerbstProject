@@ -27,3 +27,30 @@ verbatimIdentification: 9.210340370726735
 verbatimLocality: 22.94133681116996
 ================================================
 Results for Post_Seg
+
+KL Divergence for each field:
+Filename: 0.0
+associatedTaxa: 23.025850925435286
+collectedBy: 6.802394762836938
+country: 9.764858115425568
+firstPoliticalUnit: 0.9162907294169127
+habitat: 17.2693881945082
+identifiedBy: 16.44703637633483
+latestScientificName: 20.723265833098992
+locality: 18.42068074090085
+maximumEventDate: 0.05663301225743078
+minimumEventDate: 4.743799621317497
+municipality: 0.0
+originalMethod: 0.22314355130295985
+otherCatalogNumbers: 21.41641301716532
+recordNumber: 0.1386294358647991
+secondPoliticalUnit: 0.0
+secondaryCollectors: 0.0
+typeStatus: 0.0
+verbatimCollectors: 6.802394762836938
+verbatimCoordinates: 7.492962086064512
+verbatimDateIdentified: 3.837641821225684
+verbatimElevation: 9.210340370726735
+verbatimEventDate: 9.21034037081884
+verbatimIdentification: 4.605170185455471
+verbatimLocality: 22.94133681116996
