@@ -1,21 +1,35 @@
+import os
+import jq
+from dotenv import load_dotenv
+from langchain_community.document_loaders import JSONLoader
+from langchain_openai import OpenAIEmbeddings
+from langchain_chroma import Chroma
 import chromadb
-# setup Chroma in-memory, for easy prototyping. Can add persistence easily!
-client = chromadb.Client()
 
-# Create collection. get_collection, get_or_create_collection, delete_collection also available!
-collection = client.create_collection("all-my-documents")
 
-# Add docs to the collection. Can also update and delete. Row-based API coming soon!
-collection.add(
-    documents=["This is document1", "This is document2"], # we handle tokenization, embedding, and indexing automatically. You can skip that and add your own embeddings as well
-    metadatas=[{"source": "notion"}, {"source": "google-docs"}], # filter on these!
-    ids=["doc1", "doc2"], # unique for each doc
+load_dotenv()
+
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
+
+file_path = "C://Users//Riley//Documents//GitHub//RileyHerbstProject//ChromaDB//Data//8.18.24Test.json"
+collection_name = "testing"
+
+loader = JSONLoader(file_path=file_path, jq_schema=".[]", text_content=False)
+documents = loader.load()
+
+embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
+
+persistent_client = chromadb.PersistentClient()
+collection = persistent_client.get_or_create_collection(collection_name)
+langchain_chroma = Chroma(
+    client=persistent_client,
+    collection_name=collection_name,
+    embedding_function=embeddings,
 )
 
-# Query/search 2 most similar results. You can also .get by id
-results = collection.query(
-    query_texts=["This is a query document"],
-    n_results=2,
-    # where={"metadata_field": "is_equal_to_this"}, # optional filter
-    # where_document={"$contains":"search_string"}  # optional filter
-)
+db = Chroma.from_documents(documents, embeddings, persist_directory="./chromadb/bmae-json")
+
+query = "specimen with record number 68-1644"
+results = db.similarity_search(query)
+
+print(results)

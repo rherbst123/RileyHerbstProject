@@ -5,3 +5,4 @@ sam2.1_l.pt
 /Project
 *.pt
 /ProjectVenv
+ChromaDB/.env
