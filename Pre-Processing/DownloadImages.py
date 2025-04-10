@@ -2,18 +2,18 @@ import requests
 import os
 from urllib.parse import unquote
 import time
-
 import urllib.parse
 
+
+
+
+#Download images
 def download_images_from_urls(url_file, output_dir="downloaded_images"):
-    """
-    Download images from a list of URLs in a text file
-    Each image will be saved with a sequential index prefix (e.g., 0001_filename.jpg)
-    """
-    # Create output directory if it doesn't exist
+
+    
     os.makedirs(output_dir, exist_ok=True)
     
-    # Read URLs from file
+    
     with open(url_file, 'r') as f:
         urls = [line.strip() for line in f if line.strip()]
     
@@ -66,6 +66,6 @@ def download_images_from_urls(url_file, output_dir="downloaded_images"):
     print(f"Download complete. Processed {total} URLs.")
 
 if __name__ == "__main__":
-    url_file = "c:\\Users\\Riley\\Desktop\\300Images(3_29_25).txt"
-    output_dir = "c:\\Users\\Riley\\Desktop\\300Images(3_29_25)"
+    url_file = "c:\\Users\\Riley\\Desktop\\10Images.txt"
+    output_dir = "c:\\Users\\Riley\\Desktop\\10Test"
     download_images_from_urls(url_file, output_dir)

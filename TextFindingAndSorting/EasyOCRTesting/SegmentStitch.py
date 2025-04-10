@@ -14,7 +14,7 @@ import math
 reader = easyocr.Reader(['en'])  # You can add more language codes as needed
 
 # Folder containing the images and subfolders
-base_folder = "C:\\Users\\Riley\\Desktop\\BigTest"
+base_folder = "C:\\Users\\Riley\\Desktop\\300Images_Segmented_Collaged"
 
 def create_collage(image_paths, output_path, max_width=2000, background_color=(0, 0, 0)):
     images = []
@@ -129,7 +129,8 @@ for root, dirs, files in os.walk(base_folder):
                 print(f"Image {filename} has a height {height} that is 4 times as large as its width {width}. Deleting...")
                 os.remove(file_path)
                 continue
-             
+            
+            
             if width >= 4.7 * height:
                 print(f"Image {filename} has a height {width} that is 4 times as large as its width {height}. Deleting...")
                 os.remove(file_path)

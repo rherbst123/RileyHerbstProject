@@ -35,7 +35,7 @@ def resize_images(folder_path):
 
 if __name__ == "__main__":
     # Get folder path from user
-    folder_path = "c:\\Users\\Riley\\Desktop\\6Images"
+    folder_path = "c:\\Users\\Riley\\Desktop\\300Images(4_9_25)"
     
     # Check if folder exists
     if os.path.exists(folder_path):

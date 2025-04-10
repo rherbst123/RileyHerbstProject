@@ -53,12 +53,12 @@ def initialize_sam():
     sam.to(device=device)
     return SamAutomaticMaskGenerator(
         sam,
-        points_per_side=24,  # Number of points to sample per side of the image
+        points_per_side=20,  # Number of points to sample per side of the image
         pred_iou_thresh=0.97,  # Threshold for the predicted Intersection over Union (IoU) score
-        stability_score_thresh=0.90,  # Threshold for the stability score of the mask
-        crop_n_layers=0,  # Number of layers to crop from the image
-        crop_n_points_downscale_factor=0.7,  # Factor to downscale the number of points when cropping
-        min_mask_region_area=12700,  # Minimum area (in pixels) for a mask region to be considered valid 
+        stability_score_thresh=0.95,  # Threshold for the stability score of the mask
+        crop_n_layers=1,  # Number of layers to crop from the image
+        crop_n_points_downscale_factor=0.5,  # Factor to downscale the number of points when cropping
+        min_mask_region_area=15000,  # Minimum area (in pixels) for a mask region to be considered valid 
     )
 
 # Segment the images
@@ -208,6 +208,6 @@ if __name__ == "__main__":
         print("No GPU available")
 
     print("Starting...")
-    input_folder = "C:\\Users\\riley\\Documents\\GitHub\\RileyHerbstProject\\OCRTesting\\TestImage_Results"  # Update this path as needed
-    output_folder = "C:\\Users\\Riley\\Desktop\\BoxedResults"  # Update this path as needed
+    input_folder = "C:\\Users\\riley\\Desktop\\300Images(4_9_25)-SatBri-Completed"  # Update this path as needed
+    output_folder = "C:\\Users\\Riley\\Desktop\\300ImagesSegmentted(4_9_25)"  # Update this path as needed
     main_pipeline(input_folder, output_folder)
