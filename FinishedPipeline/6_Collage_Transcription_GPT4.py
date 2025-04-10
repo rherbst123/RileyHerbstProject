@@ -3,7 +3,7 @@ import base64
 import requests
 import time
 
-API_KEY = "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"
+API_KEY = ""
 MODEL_NAME = "gpt-4o"
 SYSTEM_PROMPT_FILE = "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\Prompts\\SystemPrompt.txt"
 USER_PROMPT_FILE = "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\Prompts\\Prompt_1.5.2.txt"
