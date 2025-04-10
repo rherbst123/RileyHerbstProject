@@ -58,7 +58,7 @@ def initialize_sam():
         stability_score_thresh=0.90,  # Threshold for the stability score of the mask
         crop_n_layers=0,  # Number of layers to crop from the image
         crop_n_points_downscale_factor=0.7,  # Factor to downscale the number of points when cropping
-        min_mask_region_area=2700,  # Minimum area (in pixels) for a mask region to be considered valid 
+        min_mask_region_area=12700,  # Minimum area (in pixels) for a mask region to be considered valid 
     )
 
 # Segment the images
@@ -208,6 +208,6 @@ if __name__ == "__main__":
         print("No GPU available")
 
     print("Starting...")
-    input_folder = "C:\\Users\\riley\\Desktop\\6Images"  # Update this path as needed
-    output_folder = "C:\\Users\\Riley\\Desktop\\6ImagesSeg\\Segmented"  # Update this path as needed
+    input_folder = "C:\\Users\\riley\\Documents\\GitHub\\RileyHerbstProject\\OCRTesting\\TestImage_Results"  # Update this path as needed
+    output_folder = "C:\\Users\\Riley\\Desktop\\BoxedResults"  # Update this path as needed
     main_pipeline(input_folder, output_folder)
