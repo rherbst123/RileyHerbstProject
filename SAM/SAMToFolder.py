@@ -58,7 +58,8 @@ def initialize_sam():
         stability_score_thresh=0.95,  # Threshold for the stability score of the mask
         crop_n_layers=1,  # Number of layers to crop from the image
         crop_n_points_downscale_factor=0.5,  # Factor to downscale the number of points when cropping
-        min_mask_region_area=15000,  # Minimum area (in pixels) for a mask region to be considered valid 
+        min_mask_region_area=15000,  # Minimum area (in pixels) for a mask region to be considered valid
+         
     )
 
 # Segment the images
