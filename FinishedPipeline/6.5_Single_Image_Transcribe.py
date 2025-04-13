@@ -7,7 +7,7 @@ API_KEY = "sk-proj-IepocX9VoYknBTXIe7Zks7eMt-4WOrsO66aSkFly9SAHovVtYkTecrB0QtupI
 MODEL_NAME = "gpt-4o"
 SYSTEM_PROMPT_FILE = "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\Prompts\\SystemPrompt.txt"
 USER_PROMPT_FILE = "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\Prompts\\Prompt_1.5.2.txt"
-IMAGE_FOLDER = "c:\\Users\\Riley\\Desktop\\300ImagesCollage"  # Using only one folder now
+IMAGE_FOLDER = "c:\\Users\\Riley\\Desktop\\300ImagesCollage"  
 OUTPUT_FILE = "c:\\Users\\Riley\\Desktop\\300Images_4_10_25_Only_Collaage_GPT4o.txt"
 
 def read_text_file(file_path):

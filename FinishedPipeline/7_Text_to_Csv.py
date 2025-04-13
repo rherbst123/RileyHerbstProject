@@ -53,8 +53,8 @@ def write_to_csv(data, output_filename):
             writer.writerow(record)
 
 def main():
-    input_filename = "C:\\Users\\riley\\Desktop\\300ImagesTranscription\\300Images_4_9_25.txt"  # The input text file
-    output_filename = "C:\\Users\\riley\\Desktop\\300ImagesTranscription\\300Images_4_10_25.csv"   # The output CSV file
+    input_filename = "FinishedPipeline/Outputs/TXT/300Images_4_10_25_Only_Collaage_GPT4o.txt"  # The input text file
+    output_filename = "FinishedPipeline/Outputs/CSV/300Images_4_10_25_Only_Collaage_GPT4o.csv"   # The output CSV file
 
     # Parse the text file into structured data
     data = parse_txt_file(input_filename)
