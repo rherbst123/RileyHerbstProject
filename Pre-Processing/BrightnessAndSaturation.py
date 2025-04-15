@@ -31,8 +31,8 @@ def process_folder(input_folder, output_folder, brightness_factor, saturation_fa
             adjust_image(input_path, output_path, brightness_factor, saturation_factor)
 
 if __name__ == "__main__":
-    input_folder = "c:\\Users\\Riley\\Desktop\\300Images(4_9_25)"
-    output_folder = "c:\\Users\\Riley\\Desktop\\300Images(4_9_25)-SatBri-Completed"
+    input_folder = "c:\\Users\\Riley\\Desktop\\300ImagesNoSizeChange"
+    output_folder = "c:\\Users\\Riley\\Desktop\\300ImagesNoSizeChange_4.14.25-SatBri-Completed"
 
     process_folder(
         input_folder=input_folder,

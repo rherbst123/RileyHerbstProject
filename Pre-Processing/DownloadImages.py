@@ -46,7 +46,7 @@ def download_images_from_urls(url_file, output_dir="downloaded_images"):
                     filename = f"image{ext}"
                 
                 # Create indexed filename
-                new_filename = f"{idx+1:04d}_{filename}"
+                new_filename = f"{idx+0:04d}_{filename}"
                 output_path = os.path.join(output_dir, new_filename)
                 
                 # Save the image
@@ -66,6 +66,6 @@ def download_images_from_urls(url_file, output_dir="downloaded_images"):
     print(f"Download complete. Processed {total} URLs.")
 
 if __name__ == "__main__":
-    url_file = "c:\\Users\\Riley\\Desktop\\10Images.txt"
-    output_dir = "c:\\Users\\Riley\\Desktop\\10Test"
+    url_file = "c:\\Users\\Riley\\Desktop\\300Images(3_29_25)(URLs).txt"
+    output_dir = "c:\\Users\\Riley\\Desktop\\300ImagesNoSizeChange"
     download_images_from_urls(url_file, output_dir)

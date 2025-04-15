@@ -11,12 +11,25 @@ import GPUtil
 import threading
 import time
 import os
+from torchvision.ops import boxes
+
 
 
 #This script outputs each image into its own folder containig   the segmentation visualization and the cropped masks
 # As of 10.8.24 I am using Python 3.12.7 with CUDA 11.8 and Torch 2.4.1.
 
+_original_batched_nms = boxes.batched_nms
 
+
+
+
+def patched_batched_nms(boxes_tensor, scores, idxs, iou_threshold):
+    boxes_tensor = boxes_tensor.cpu()
+    scores = scores.cpu()
+    idxs = idxs.cpu()
+    return _original_batched_nms(boxes_tensor, scores, idxs, iou_threshold)
+
+boxes.batched_nms = patched_batched_nms
 
 def get_resource_usage():
     # Get CPU usage
@@ -53,12 +66,12 @@ def initialize_sam():
     sam.to(device=device)
     return SamAutomaticMaskGenerator(
         sam,
-        points_per_side=20,  # Number of points to sample per side of the image
-        pred_iou_thresh=0.97,  # Threshold for the predicted Intersection over Union (IoU) score
-        stability_score_thresh=0.95,  # Threshold for the stability score of the mask
+        points_per_side=19,  # Number of points to sample per side of the image
+        pred_iou_thresh=0.90,  # Threshold for the predicted Intersection over Union (IoU) score
+        stability_score_thresh=0.92,  # Threshold for the stability score of the mask
         crop_n_layers=1,  # Number of layers to crop from the image
-        crop_n_points_downscale_factor=0.5,  # Factor to downscale the number of points when cropping
-        min_mask_region_area=15000,  # Minimum area (in pixels) for a mask region to be considered valid
+        crop_n_points_downscale_factor=0.7,  # Factor to downscale the number of points when cropping
+        min_mask_region_area=14500,  # Minimum area (in pixels) for a mask region to be considered valid
          
     )
 
@@ -67,7 +80,7 @@ def generate_segmentation(image_path, mask_generator):
     image = cv2.imread(image_path)
     if image is None:
         raise ValueError(f"Failed to read image {image_path}")
-    max_dimension = 4096
+    max_dimension = 2250
     scale = max_dimension / max(image.shape[:2])
     if scale < 1:
         image = cv2.resize(image, (int(image.shape[1]*scale), int(image.shape[0]*scale)))
@@ -209,6 +222,7 @@ if __name__ == "__main__":
         print("No GPU available")
 
     print("Starting...")
-    input_folder = "C:\\Users\\riley\\Desktop\\300Images(4_9_25)-SatBri-Completed"  # Update this path as needed
-    output_folder = "C:\\Users\\Riley\\Desktop\\300ImagesSegmentted(4_9_25)"  # Update this path as needed
+    
+    input_folder = "C:\\Users\\Riley\\Desktop\\300ImageTess\\300Images_4_14_25_SatBri_Completed"  # Update this path as needed
+    output_folder = "C:\\Users\\Riley\\Desktop\\300ImagesSegmentted4_14_25_ThirdRun"  # Update this path as needed
     main_pipeline(input_folder, output_folder)

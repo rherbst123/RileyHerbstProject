@@ -1,0 +1,297 @@
+Image: 0000_V0573776F
+------------------------------
+verbatimCollectors: Dr. EDGAR A. MEARNS, Collector  
+collectedBy: E. A. Mearns  
+secondaryCollectors: N/A  
+recordNumber: 2582  
+verbatimEventDate: Jan. 10 to Feb. 2, 1910  
+minimumEventDate: 1910-01-10  
+maximumEventDate: 1910-02-02  
+verbatimIdentification: Cyperus callistus Ridley  
+latestScientificName: Cyperus maculatus  
+identifiedBy: J. Raynal  
+verbatimDateIdentified: 19.10.1971  
+associatedTaxa: Cyperus exaltatus  
+country: South Sudan  
+firstPoliticalUnit: Bahr el Jebel  
+secondPoliticalUnit: Lado Enclave  
+municipality: N/A  
+verbatimLocality: "Rhino Camp," Bahr el Jebel, Lado Enclave, Congo Free State  
+locality: Rhino Camp  
+habitat: N/A  
+verbatimElevation: N/A  
+verbatimCoordinates: N/A  
+otherCatalogNumbers: 468360  
+originalMethod: Mix of Handwritten and Typed  
+typeStatus: no type status  
+==================================================
+Image: 0001_V0576008F
+------------------------------
+verbatimCollectors: COLL. F. G. OVERLAET  
+collectedBy: F. G. Overlaet  
+secondaryCollectors: N/A  
+recordNumber: 1923-4  
+verbatimEventDate: 1923-4  
+minimumEventDate: 1923-04-00  
+maximumEventDate: N/A  
+verbatimIdentification: Habenaria  
+latestScientificName: Habenaria  
+identifiedBy: B. Pettersson  
+verbatimDateIdentified: 1984  
+associatedTaxa: N/A  
+country: Democratic Republic of the Congo  
+firstPoliticalUnit: N/A  
+secondPoliticalUnit: N/A  
+municipality: N/A  
+verbatimLocality: N/A  
+locality: [precise locality unknown]  
+habitat: N/A  
+verbatimElevation: N/A  
+verbatimCoordinates: N/A  
+otherCatalogNumbers: 752856  
+originalMethod: Mix of Handwritten and Typed  
+typeStatus: no type status  
+==================================================
+Image: 0002_V0576279F
+------------------------------
+verbatimCollectors: Leg. R. A. Maas Geesteranus no 4924 dd. 14-VI-1949  
+collectedBy: R. A. Maas Geesteranus  
+secondaryCollectors: N/A  
+recordNumber: 4924  
+verbatimEventDate: 14-VI-1949  
+minimumEventDate: 1949-06-14  
+maximumEventDate: N/A  
+verbatimIdentification: Cyperus segmentatus C.B. CL.  
+latestScientificName: Cyperus segmentatus  
+identifiedBy: N/A  
+verbatimDateIdentified: N/A  
+associatedTaxa: N/A  
+country: Kenya  
+firstPoliticalUnit: Nyanzas Province  
+secondPoliticalUnit: Londiani District  
+municipality: N/A  
+verbatimLocality: Tinderet Forest Reserve, Camp I  
+locality: Tinderet Forest Reserve, Camp I  
+habitat: Glade surrounded by rather open, tall forest, containing e.g. Dombeya mastersii and Olea hochstetteri  
+verbatimElevation: 2260 m a.m.  
+verbatimCoordinates: lat. 0° 5' S., long. 35° 27' E.  
+otherCatalogNumbers: 1447352  
+originalMethod: Unsure  
+typeStatus: No type status  
+==================================================
+Image: 0003_V0577013F
+------------------------------
+verbatimCollectors: J. M. et B. Reitsma  
+collectedBy: J. M. Reitsma  
+secondaryCollectors: B. Reitsma  
+recordNumber: 2013  
+verbatimEventDate: d.d. 3-3-86  
+minimumEventDate: 1986-03-03  
+maximumEventDate: N/A  
+verbatimIdentification: Orchidaceae Bulbophyllum scaberulum (Rolfe) Bolus var. scaberulum  
+latestScientificName: Bulbophyllum scaberulum var. scaberulum  
+identifiedBy: O. Kosovsky  
+verbatimDateIdentified: 2011  
+associatedTaxa: N/A  
+country: Gabon  
+firstPoliticalUnit: Woleu-Ntem  
+secondPoliticalUnit: N/A  
+municipality: Oyem  
+verbatimLocality: chantier Rougier Océan  
+locality: 6 kilometers northwest of Oyem, chantier Rougier Océan  
+habitat: Primary rain forest  
+verbatimElevation: N/A  
+verbatimCoordinates: 0°41' N x 11°07' E  
+otherCatalogNumbers: N° 2310219  
+originalMethod: Mix of Handwritten and Typed  
+typeStatus: no type status  
+==================================================
+Image: 0004_V0577892F
+------------------------------
+verbatimCollectors: Carvalho 2102  
+collectedBy: Carvalho  
+secondaryCollectors: N/A  
+recordNumber: 2102  
+verbatimEventDate: 26-VII-1986  
+minimumEventDate: 1986-07-26  
+maximumEventDate: N/A  
+verbatimIdentification: Mariscus alternifolius Vahl  
+latestScientificName: Mariscus alternifolius  
+identifiedBy: C. Cebolla | M. A. Rivas Ponce  
+verbatimDateIdentified: 1995  
+associatedTaxa: N/A  
+country: Equatorial Guinea  
+firstPoliticalUnit: Bioko Norte  
+secondPoliticalUnit: N/A  
+municipality: Malabo  
+verbatimLocality: finca las Carboneras  
+locality: finca las Carboneras  
+habitat: Bosque secundario y terrenos incultos  
+verbatimElevation: 8 m  
+verbatimCoordinates: 32NMK7415  
+otherCatalogNumbers: 2201108  
+originalMethod: Typed  
+typeStatus: no type status  
+==================================================
+Image: 0005_V0578553F
+------------------------------
+verbatimCollectors: Fernández Casas 11206  
+collectedBy: F. Casas  
+secondaryCollectors: N/A  
+recordNumber: 11206  
+verbatimEventDate: 5-II-1989  
+minimumEventDate: 1989-02-05  
+maximumEventDate: N/A  
+verbatimIdentification: Agrostis manii (Hooker fil.) Stapf  
+latestScientificName: Agrostis manii  
+identifiedBy: C. Cebolla | M. A. Rivas Ponce  
+verbatimDateIdentified: 1993  
+associatedTaxa: N/A  
+country: Equatorial Guinea  
+firstPoliticalUnit: Bioko  
+secondPoliticalUnit: N/A  
+municipality: N/A  
+verbatimLocality: cumbre del pico Basile, 32NMJ7396  
+locality: cumbre del pico Basile  
+habitat: márgenes de la pista  
+verbatimElevation: 2870 m  
+verbatimCoordinates: N/A  
+otherCatalogNumbers: Nº 2200806  
+originalMethod: Mix of Handwritten and Typed  
+typeStatus: no type status  
+==================================================
+Image: 0006_V0574052F
+------------------------------
+verbatimCollectors: Coll. F. G. Overlaet  
+collectedBy: F. G. Overlaet  
+secondaryCollectors: N/A  
+recordNumber: s.n.  
+verbatimEventDate: 1923-4  
+minimumEventDate: 1923-04-00  
+maximumEventDate: N/A  
+verbatimIdentification: Scirpus mucronatus L.  
+latestScientificName: Scirpus mucronatus  
+identifiedBy: G. E. Smith  
+verbatimDateIdentified: 1960  
+associatedTaxa: N/A  
+country: Democratic Republic of the Congo  
+firstPoliticalUnit: N/A  
+secondPoliticalUnit: N/A  
+municipality: N/A  
+verbatimLocality: PLANTS OF BELGIAN CONGO  
+locality: [precise locality unknown]  
+habitat: N/A  
+verbatimElevation: N/A  
+verbatimCoordinates: N/A  
+otherCatalogNumbers: 752378  
+originalMethod: Unsure  
+typeStatus: no type status  
+==================================================
+Image: 0007_V0577681F
+------------------------------
+verbatimCollectors: Collected by C.J.P. Seegeler  
+collectedBy: C. J. P. Seegeler  
+secondaryCollectors: N/A  
+recordNumber: 2386  
+verbatimEventDate: dd.: 23 October 1972  
+minimumEventDate: 1972-10-23  
+maximumEventDate: N/A  
+verbatimIdentification: Lomatia abyssinica Sch.Bip.  
+latestScientificName: Lomatia abyssinica  
+identifiedBy: G. H. J. Amshoff  
+verbatimDateIdentified: 1982  
+associatedTaxa: Vernonia abyssinica  
+country: Ethiopia  
+firstPoliticalUnit: Shewa  
+secondPoliticalUnit: N/A  
+municipality: N/A  
+verbatimLocality: c. 3 km from Menzana, on road to Asebe Teferi  
+locality: c. 3 kilometers from Menzana, on road to Asebe Teferi  
+habitat: Hill on lava flow  
+verbatimElevation: 2250 m  
+verbatimCoordinates: 6° 56' N, 39° 54' E  
+otherCatalogNumbers: Nº 2302805  
+originalMethod: Mix of Handwritten and Typed  
+typeStatus: no type status  
+==================================================
+Image: 0008_V0597557F
+------------------------------
+verbatimCollectors: N/A  
+collectedBy: N/A  
+secondaryCollectors: N/A  
+recordNumber: 48  
+verbatimEventDate: 05.08.2003  
+minimumEventDate: 2003-08-05  
+maximumEventDate: N/A  
+verbatimIdentification: Carduus leptacanthus FRES  
+latestScientificName: Carduus leptacanthus  
+identifiedBy: N/A  
+verbatimDateIdentified: N/A  
+associatedTaxa: N/A  
+country: Democratic Republic of the Congo  
+firstPoliticalUnit: Sud-Kivu  
+secondPoliticalUnit: Kalehe  
+municipality: Musisi  
+verbatimLocality: Musisi  
+locality: Musisi  
+habitat: N/A  
+verbatimElevation: N/A  
+verbatimCoordinates: N/A  
+otherCatalogNumbers: Nº 2257689  
+originalMethod: Unsure  
+typeStatus: no type status  
+==================================================
+Image: 0009_V0594376F
+------------------------------
+verbatimCollectors: J.M. Fay 6017  
+collectedBy: J. M. Fay  
+secondaryCollectors: N/A  
+recordNumber: 8017  
+verbatimEventDate: 25 May 1987  
+minimumEventDate: 1987-05-25  
+maximumEventDate: N/A  
+verbatimIdentification: Burkea africana Hook.  
+latestScientificName: Burkea africana  
+identifiedBy: J. M. Fay  
+verbatimDateIdentified: N/A  
+associatedTaxa: N/A  
+country: Central African Republic  
+firstPoliticalUnit: N/A  
+secondPoliticalUnit: N/A  
+municipality: N/A  
+verbatimLocality: Park Manovo-Gounda-St. Floris. Vicinity of Camp Koumbala.  
+locality: Park Manovo-Gounda-St. Floris, Vicinity of Camp Koumbala  
+habitat: N/A  
+verbatimElevation: elev. 600 m  
+verbatimCoordinates: 08°29'N 21°12'E  
+otherCatalogNumbers: NCI# Wood Q67B/0065, Bark Q67B/0066, Root Q67B/0067, Leaves Q67B/0068  
+originalMethod: Unsure  
+typeStatus: no type status  
+==================================================
+Image: 0010_V0597275F
+------------------------------
+verbatimCollectors: Collected by: P.C.M. Jansen  
+collectedBy: P. C. M. Jansen  
+secondaryCollectors: N/A  
+recordNumber: 5996  
+verbatimEventDate: d.d.: 14 April 1976  
+minimumEventDate: 1976-04-14  
+maximumEventDate: N/A  
+verbatimIdentification: Cirsium vulgare (Savi) Ten.  
+latestScientificName: Cirsium vulgare  
+identifiedBy: C. C. H. Jongkind  
+verbatimDateIdentified: 1987  
+associatedTaxa: N/A  
+country: Ethiopia  
+firstPoliticalUnit: Harerge  
+secondPoliticalUnit: N/A  
+municipality: Damata Village  
+verbatimLocality: around Damata Village, near Alemaya. Between chat and Sorghum fields.  
+locality: around Damata Village, near Alemaya  
+habitat: between chat and Sorghum fields  
+verbatimElevation: Alt: 2000m  
+verbatimCoordinates: c. 9°24' N, 42°01' E  
+otherCatalogNumbers: Nº 2302849  
+originalMethod: Mix of Handwritten and Typed  
+typeStatus: no type status  
+==================================================

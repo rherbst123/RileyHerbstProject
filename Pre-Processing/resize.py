@@ -3,8 +3,8 @@ from PIL import Image
 
 def resize_images(folder_path):
     # Target dimensions
-    target_width = 1000
-    target_height = 1750
+    target_width = 1500
+    target_height = 2250
     
     # Supported image formats
     supported_formats = ['.jpg', '.jpeg', '.png']
@@ -35,7 +35,7 @@ def resize_images(folder_path):
 
 if __name__ == "__main__":
     # Get folder path from user
-    folder_path = "c:\\Users\\Riley\\Desktop\\300Images(4_9_25)"
+    folder_path = "c:\\Users\\Riley\\Desktop\\300Images_4.14.25-SatBri-Completed"
     
     # Check if folder exists
     if os.path.exists(folder_path):

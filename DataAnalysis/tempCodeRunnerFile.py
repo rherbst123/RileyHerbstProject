@@ -1,1 +1,2 @@
-260FullImagesTranscribed
+"C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\300_Images_WHistory.csv",
+    "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\300GroundTruth.csv",

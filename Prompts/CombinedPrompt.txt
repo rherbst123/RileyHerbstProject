@@ -1,37 +1,62 @@
+Please combine all of the following conversation entries into a single unified record.
+Each field should be merged such that the most complete or most reliable version is preserved.
+If values differ between entries, prefer data from entries labeled with 'mask' over those from 'segmentation_visualization'.
 
-    "Please combine all of the following conversation entries into a single unified record. "
-    "Each field should be merged such that the most complete or most reliable version is preserved. "
-    "If values differ between entries, prefer data from entries labeled with 'mask' over those from 'segmentation_visualization'.\n\n"
-    f"{conversation_text}\n\n"
-    "Output the result as a single list of key-value pairs in plain text (txt format). "
-    "Do not add numbering, bullet points, markdown, or any extra commentary. "
-    "Include **all fields** listed in the schema. "
-    "If a field appears in some entries but not others, ensure the final output still includes that field (do not omit any). "
-    "If a value is uncertain, write 'unsure and check'. If a value is truly not present, use 'N/A'.\n\n"
-    "Ensure only ONE entry is returned, with the best available values merged from all conversation entries. "
-    "Strictly follow the order and exact field names as specified below:\n\n"
-    "verbatimCollectors:\n"
-    "collectedBy:\n"
-    "secondaryCollectors:\n"
-    "recordNumber:\n"
-    "verbatimEventDate:\n"
-    "minimumEventDate:\n"
-    "maximumEventDate:\n"
-    "verbatimIdentification:\n"
-    "latestScientificName:\n"
-    "identifiedBy:\n"
-    "verbatimDateIdentified:\n"
-    "associatedTaxa:\n"
-    "country:\n"
-    "firstPoliticalUnit:\n"
-    "secondPoliticalUnit:\n"
-    "municipality:\n"
-    "verbatimLocality:\n"
-    "locality:\n"
-    "habitat:\n"
-    "verbatimElevation:\n"
-    "verbatimCoordinates:\n"
-    "otherCatalogNumbers:\n"
-    "originalMethod:\n"
-    "typeStatus:\n"
+Output the result as a single list of key-value pairs in plain text (txt format). 
+Do not add numbering, bullet points, markdown, or any extra commentary.
+Include **all fields** listed in the schema below, in the exact order and with the exact field names as shown.
 
+If a field appears in some entries but not others, ensure the final output still includes that field (do not omit any).
+If a value is uncertain, write 'unsure and check'. If a value is truly not present, use 'N/A'.
+If there are multiple options for a field, select the most complete version or the one from the mask layer.
+Only return one final merged entry.
+
+Pay careful attention to the instructions below for each field:
+
+verbatimCollectors: The collectors exactly as written on the label. This may include one or more collectors. Do not abbreviate or reformat any names in this field. This field may include prefixes like "Dr." or "leg." — preserve those as written.
+
+collectedBy: The first collector only. Format as follows: abbreviate the first and middle names with initials (with periods and spaces), and write the last name fully capitalized only where appropriate. Example: R. M. Schuster. Do not preserve titles (e.g., Dr., Prof.).
+
+secondaryCollectors: All collectors listed after the first. Use the same formatting rules as for collectedBy. Separate multiple names with a pipe (`|`). If no secondary collectors exist, enter "N/A".
+
+recordNumber: The collection number from the field label. If not present, use “s.n.”.
+
+verbatimEventDate: The collection date exactly as written on the label. Do not correct formatting, spelling, punctuation, or spacing. If missing, enter “s.d.”.
+
+minimumEventDate: Convert the start of the collection date to ISO format (YYYY-MM-DD). If only a month or year is known, use "00" for unknown parts (e.g., "1956-03-00"). If it's a date range, use the start date here.
+
+maximumEventDate: If the date is a range, extract the end of the date range in ISO format (YYYY-MM-DD). If there is no date range, insert “N/A”.
+
+verbatimIdentification: Transcribe the identification exactly as it appears on the label, including any uncertainty, abbreviations, or qualifiers. Do not correct spelling, punctuation, or Latin formatting.
+
+latestScientificName: Extract the most recent scientific name (typically on a separate or later identification label). Only return the Latin binomial, removing the authority name (e.g., person names or abbreviations like L. or Boeck.). Include varieties or subspecies if present (e.g., “Cyperus rotundus var. vulgaris”).
+
+identifiedBy: The person who identified the specimen. Use the same formatting rules as for collectedBy. If unknown, write “unsure and check”. If absent, write “N/A”.
+
+verbatimDateIdentified: The exact date of identification as written on the label. Do not reformat. If missing, write “N/A”.
+
+associatedTaxa: Any taxonomic name the collected specimen was found growing alongside. If present, strip any authority (person name), and only include the Latin name. If absent, write “N/A”.
+
+country: Provide the current full name of the country where the specimen was collected. Do not abbreviate.
+
+firstPoliticalUnit: The first-level administrative division (such as province or state). Use the name only (no tier name like “State” or “Province”).
+
+secondPoliticalUnit: The second-level administrative division (such as county or district). Use the name only (no tier label).
+
+municipality: The town, city, or village where the event occurred. Do not abbreviate.
+
+verbatimLocality: The original place description exactly as shown on the label. Do not abbreviate or expand any text. Do not include coordinates or elevation here. Do not duplicate firstPoliticalUnit or secondPoliticalUnit if already parsed.
+
+locality: A cleaned version of the location description. Retain full units (e.g., feet, meters). Exclude coordinates, elevation, habitat. If no location is specified, insert “[precise locality unknown]”.
+
+habitat: The habitat description as written on the label. This includes any information about forest type, soil, etc. If not present, write “N/A”.
+
+verbatimElevation: The elevation description exactly as written on the label. No reformatting.
+
+verbatimCoordinates: The coordinate description exactly as written on the label. No reformatting.
+
+otherCatalogNumbers: Any visible stamped or printed identifier, other than the recordNumber.
+
+originalMethod: Choose one: Handwritten, Typed, Mix of Handwritten and Typed, Unsure.
+
+typeStatus: If the label contains “type” or specific terms like “holotype”, “isotype”, “lectotype”, include that term. If not, write “no type status”.

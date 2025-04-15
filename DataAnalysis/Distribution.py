@@ -60,10 +60,12 @@ def analyze_mismatches(transcribed_path, ground_truth_path, output_txt_path, sho
             plt.ylabel("Number of Entries")
             plt.xticks(mismatch_distribution.index)
             max_y = mismatch_distribution.values.max()
-            plt.yticks(range(0, max_y + 2, 2))
+            plt.yticks(range(0, max_y + 1, 1))
             plt.grid(axis='y')
             plt.tight_layout()
             plt.show()
 
 # Example usage
-analyze_mismatches("c:\\Users\\riley\\Desktop\\260FullImagesTranscribed.csv", "c:\\Users\\riley\\Desktop\\260ImagesGroundTruth.csv", "c:\\Users\\riley\\Desktop\\Entry_Mismatch_Distribution.txt")
+analyze_mismatches("C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\300_Images_WHistory.csv",
+    "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\300GroundTruth.csv", 
+                   "c:\\Users\\riley\\Desktop\\Entry_Mismatch_Distribution.txt")

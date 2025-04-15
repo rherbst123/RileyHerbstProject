@@ -4,15 +4,16 @@ import requests
 import time
 
 # --- Configuration variables ---
-API_KEY = ""
+API_KEY = "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"
 MODEL_NAME = "gpt-4o"
+#MODEL_NAME_2 = "o1"
 SYSTEM_PROMPT_FILE = r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\Prompts\SystemPrompt.txt"
-USER_PROMPT_FILE = r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\Prompts\Prompt_1.5.2.txt"
+USER_PROMPT_FILE = r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\Prompts\Raw_Text_Extraction.txt"
 COMBINED_PROMPT_FILE = r"C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\Prompts\\CombinedPrompt.txt"
 
 
 # Set the base folder which contains subfolders (each with images)
-BASE_IMAGE_FOLDER = r"C:\\Users\\Riley\\Desktop\\300Images_Segmented_Conversation_History\\Segmented"
+BASE_IMAGE_FOLDER = r"C:\\Users\\Riley\\Desktop\\10ImagesTest14"
 
 # Separator between entries in the text file.
 separator = "=" * 50 + "\n"
@@ -51,7 +52,7 @@ def run_combined_prompt(conversation_text):
     messages = [
         {
             "role": "system",
-            "content": "Your job is to combine a set of outputs into one combined list."
+            "content": "Your job is to create a perfect list based on the text given and to parse it to the correct fields given."
         },
         {
             "role": "user",
