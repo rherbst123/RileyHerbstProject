@@ -5,7 +5,7 @@ import json
 
 # Initialize the OpenAI client
 client = OpenAI(
-    api_key="sk-3787bb49f3934ffd82a3732b7ae7565b",  # Replace with your actual API key
+    api_key="",  # Replace with your actual API key
     base_url="https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
 )
 
