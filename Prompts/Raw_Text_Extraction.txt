@@ -13,3 +13,5 @@ Do not include any descriptions of visual elements, colors, shapes, or layout.
 Omit personal interpretations, comments, or emotional statements.
 
 The output should strictly contain only text exactly as it appears in the image.
+
+please tell me what information you get off of each sheet

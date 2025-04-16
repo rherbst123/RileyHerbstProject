@@ -4,7 +4,7 @@ import requests
 import time
 
 # --- Configuration variables ---
-API_KEY = "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"
+API_KEY = ""
 MODEL_NAME = "gpt-4o"
 #MODEL_NAME_2 = "o1"
 SYSTEM_PROMPT_FILE = r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\Prompts\SystemPrompt.txt"

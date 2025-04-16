@@ -25,3 +25,5 @@ verbatimCoordinates: (The original verbatim text of the coordinates, if they exi
 otherCatalogNumbers: (An identifier for the record within the dataset - this is not to be confused with the recordNumber - the otherCatalogNumbers maybe a stamped number on the herbarium sheet), 
 originalMethod: The method by which the original data was recorded, select from this list (Handwritten, Typed, Mix of Handwritten and Typed, Unsure)
 typeStatus: If the specimen has “type” written or typed on the label and can take the form holotype, isotype etc state as such, otherwise so “no type status”
+
+if any field does not have information please put N/A for that field

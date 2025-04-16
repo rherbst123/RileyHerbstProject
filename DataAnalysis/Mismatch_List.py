@@ -65,7 +65,7 @@ def collect_all_mismatches(transcribed_path, ground_truth_path, output_txt_path)
 
 
 collect_all_mismatches(
-    "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\11_Images_test.csv",
-    "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\11_Images_GroundTruth.csv",
+    "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\Qwen2.5_Max_4_15_25_Test_3.csv",
+    "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\10Images_Ground_Truth.csv",
     "c:\\Users\\riley\\Desktop\\Mismatches_11_Images.txt"
 )
