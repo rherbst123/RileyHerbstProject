@@ -60,11 +60,12 @@ def analyze_mismatches(transcribed_path, ground_truth_path, output_txt_path, sho
             plt.ylabel("Number of Entries")
             plt.xticks(mismatch_distribution.index)
             max_y = mismatch_distribution.values.max()
-            plt.yticks(range(0, max_y + 2, 2))
+            plt.yticks(range(0, max_y + 5, 5))
             plt.grid(axis='y')
             plt.tight_layout()
             plt.show()
 
+<<<<<<< Updated upstream
 # # Example usage
 analyze_mismatches("C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\300_Images_WHistory.csv",
                    "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\300GroundTruth.csv", 
@@ -73,3 +74,9 @@ analyze_mismatches("C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\Fin
 # analyze_mismatches("C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\260Images_4_10_25_Cropped_Full_Images_GPT4o.csv",
 #                    "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\260ImagesGroundTruth_4_9_25_GPT4o.csv", 
 #                    "C:\\Users\\riley\\Desktop\\260Images.txt")
+=======
+# Example usage
+analyze_mismatches("C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\300_Images_WHistory.csv",
+                    "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\300GroundTruth.csv",
+                    "C:\\Users\\riley\\Desktop\\Entry_Mismatch_Distribution_4_15_25.txt")
+>>>>>>> Stashed changes

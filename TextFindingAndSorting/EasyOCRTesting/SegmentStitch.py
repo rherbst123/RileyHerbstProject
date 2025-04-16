@@ -14,7 +14,11 @@ import math
 reader = easyocr.Reader(['en'])  # You can add more language codes as needed
 
 # Folder containing the images and subfolders
+<<<<<<< Updated upstream
 base_folder = "C:\\Users\\Riley\\Desktop\\300ImagesSegmentted4_14_25_ThirdRun_OCRd"
+=======
+base_folder = "C:\\Users\\Riley\\Desktop\\300Images_4_15_25_Cleaned"
+>>>>>>> Stashed changes
 
 def create_collage(image_paths, output_path, max_width=2000, background_color=(0, 0, 0)):
     images = []
