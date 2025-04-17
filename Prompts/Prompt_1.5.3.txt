@@ -1,0 +1,86 @@
+Please transcribe all herbarium label details carefully following these explicit rules:
+
+- Do not include periods (.) at the end of fields.
+- Explicitly insert "N/A" if information is missing.
+- Write exactly "unsure and check" if any detail is unclear.
+- Never translate or interpret—transcribe exactly as printed.
+
+Follow precisely the formatting and field order below:
+
+verbatimCollectors:  
+Transcribe collectors exactly as printed. Include prefixes ("leg.", "coll.") only if explicitly visible on the label.
+
+collectedBy:  
+Transcribe ONLY the first listed collector's name, formatted as initials (with spacing) followed by last name (e.g., R. A. Maas). Omit prefixes unless explicitly visible.
+
+secondaryCollectors:  
+List any additional collectors exactly as printed on the label, formatted as initials followed by last name. Separate each clearly listed additional collector by a pipe ("|"). If the label uses "and", retain exactly as printed.
+
+recordNumber:  
+Exactly transcribe the collection number. If none, insert "s.n." precisely.
+
+verbatimEventDate:  
+Transcribe exactly as printed without alteration. If missing, insert "s.d.".
+
+minimumEventDate:  
+Convert to ISO-8601 (YYYY-MM-DD), inserting "00" for unknown days/months.
+
+maximumEventDate:  
+Only use for clearly indicated date ranges. Otherwise, insert "N/A".
+
+verbatimIdentification:  
+Exactly transcribe the original identification, including taxonomic authority names, qualifiers, hybrids, uncertainties, precisely as printed.
+
+latestScientificName:  
+Provide the full scientific name exactly as presented on the label, including clearly printed authorities (names of persons, initials, or abbreviations after the Latin binomial). Do NOT omit these authorities.
+
+identifiedBy:  
+Provide the identifier’s name formatted as initials and last name (e.g., R. A. Maas). Include only names explicitly indicated by "det." or "determined by". Insert "N/A" if absent or unclear.
+
+verbatimDateIdentified:  
+Transcribe exactly as printed or insert "N/A" if missing.
+
+associatedTaxa:  
+Transcribe exactly as printed, preserving all conjunctions ("and"), "sp.", or abbreviations exactly as listed. Do not add pipes unless explicitly printed.
+
+country:  
+Transcribe exactly as stated on the label. If abbreviated, convert clearly identified abbreviations to current full country names.
+
+firstPoliticalUnit:  
+Transcribe exactly as printed, excluding administrative descriptors ("Province", "State") unless explicitly included on the label.
+
+secondPoliticalUnit:  
+Transcribe exactly as printed if clearly indicated; otherwise, insert "N/A".
+
+municipality:  
+Transcribe exactly as explicitly named; do not guess. Insert "N/A" if absent.
+
+verbatimLocality:  
+Precisely transcribe original locality text. Do NOT omit or abbreviate political units, measurement units, or conjunctions if explicitly included. Exclude coordinates and elevation.
+
+locality:  
+Transcribe verbatim locality exactly, fully writing out units (e.g., "miles", "meters", "feet"). Do NOT shorten, omit, or abbreviate unless printed exactly so on the label. Insert "[precise locality unknown]" if unclear.
+
+habitat:  
+Transcribe exactly as printed. Include all explicit botanical details or associations. Do NOT summarize or omit explicitly written details.
+
+verbatimElevation:  
+Exactly transcribe as written, including exact abbreviations ("m", "msnm", "ft", etc.). Insert "N/A" if absent.
+
+verbatimCoordinates:  
+Exactly transcribe as printed, including spacing, punctuation, and directional letters. Insert "N/A" if absent.
+
+otherCatalogNumbers:  
+Precisely transcribe stamped or printed catalog numbers only, excluding extraneous text. Separate multiple numbers explicitly printed separately with pipes ("|").
+
+originalMethod:  
+Categorize strictly based on visual clarity:
+- "Handwritten": entirely handwritten
+- "Typed": entirely typed
+- "Mix of Handwritten and Typed": explicit and clear combination
+- "Unsure": not clearly discernible
+
+typeStatus:  
+Transcribe exactly as printed (e.g., "Holotype", "Isotype", capitalized exactly as on label). Insert "no type status" only if explicitly absent.
+
+Follow each rule exactly, transcribing only precisely visible text without interpretations or omissions.

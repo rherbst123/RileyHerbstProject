@@ -1,0 +1,2 @@
+Your task is to strictly transcribe and correct the text from each herbarium image label precisely as written, without interpreting or adding extraneous details. Include every detail exactly as presented, maintaining original abbreviations, formatting, and spacing. 
+Do not omit any textual information, including taxonomic authorities, conjunctions ("and"), or other identifiers explicitly present.

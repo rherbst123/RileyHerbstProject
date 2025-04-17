@@ -1,0 +1,485 @@
+Catalog Number: V0576279F
+Total Mistakes: 9
+============================================================
+Field: associatedTaxa
+  Transcribed:   Dombeya mastersii | Olea hochstetteri
+  Ground Truth:  Dombeya mastersii and Olea hochstetteri
+  Similarity:    0.947
+----------------------------------------
+Field: collectedBy
+  Transcribed:   R A Maas Geesteranus
+  Ground Truth:  R A Maas Gesteranus
+  Similarity:    0.974
+----------------------------------------
+Field: habitat
+  Transcribed:   glade surrounded by rather open tall forest containing ao Dombeya mastersii and Olea hochstetteri
+  Ground Truth:  Glade surrounded by open tall forest
+  Similarity:    0.526
+----------------------------------------
+Field: latestScientificName
+  Transcribed:   Pycreus segmentatus
+  Ground Truth:  Pycreus segmentatus CBCl
+  Similarity:    0.884
+----------------------------------------
+Field: locality
+  Transcribed:   Tinderet Forest Reserve Camp I
+  Ground Truth:  Londiani District Tinderet Forest Reserve Camp I
+  Similarity:    0.769
+----------------------------------------
+Field: originalMethod
+  Transcribed:   Typed
+  Ground Truth:  Mix of Handwritten and Typed
+  Similarity:    0.303
+----------------------------------------
+Field: secondPoliticalUnit
+  Transcribed:   Londiani
+  Ground Truth:  
+  Similarity:    0.0
+----------------------------------------
+Field: verbatimCollectors
+  Transcribed:   Leg R A Maas Geesteranus no 4924 dd 14-VI 1949
+  Ground Truth:  R A Maas Gesteranus
+  Similarity:    0.585
+----------------------------------------
+Field: verbatimLocality
+  Transcribed:   Tinderet Forest Reserve Camp I lat 0° 5' S long 35° 27' E
+  Ground Truth:  Nyanza Province Londiani Distr Tinderet Forest Reserve Camp I
+  Similarity:    0.508
+----------------------------------------
+
+
+Catalog Number: V0577892F
+Total Mistakes: 9
+============================================================
+Field: collectedBy
+  Transcribed:   J Carvalho
+  Ground Truth:  Carvalho
+  Similarity:    0.889
+----------------------------------------
+Field: firstPoliticalUnit
+  Transcribed:   Bioko
+  Ground Truth:  
+  Similarity:    0.0
+----------------------------------------
+Field: identifiedBy
+  Transcribed:   C Cebolla | M A Rivas Ponce
+  Ground Truth:  C Cebolla & Ma A Rivas Ponce
+  Similarity:    0.945
+----------------------------------------
+Field: latestScientificName
+  Transcribed:   Mariscus alternifolius
+  Ground Truth:  Mariscus alternifolius Vahl
+  Similarity:    0.898
+----------------------------------------
+Field: locality
+  Transcribed:   finca las Carboneras
+  Ground Truth:  Bioco: Malabo finca las Carboneras
+  Similarity:    0.741
+----------------------------------------
+Field: originalMethod
+  Transcribed:   Mix of Handwritten and Typed
+  Ground Truth:  Typed
+  Similarity:    0.303
+----------------------------------------
+Field: otherCatalogNumbers
+  Transcribed:   2201108
+  Ground Truth:  220108
+  Similarity:    0.923
+----------------------------------------
+Field: verbatimCollectors
+  Transcribed:   Carvalho 2102
+  Ground Truth:  Carvalho
+  Similarity:    0.762
+----------------------------------------
+Field: verbatimLocality
+  Transcribed:   finca las Carboneras 32NMK7415 8 m Bosque secundario y terrenos incultos Herbácea 20-30 cm
+  Ground Truth:  Bioco: Malabo finca las Carboneras
+  Similarity:    0.323
+----------------------------------------
+
+
+Catalog Number: V0578553F
+Total Mistakes: 10
+============================================================
+Field: collectedBy
+  Transcribed:   F Casas
+  Ground Truth:  Fernandez Casas
+  Similarity:    0.636
+----------------------------------------
+Field: firstPoliticalUnit
+  Transcribed:   Bioko
+  Ground Truth:  
+  Similarity:    0.0
+----------------------------------------
+Field: habitat
+  Transcribed:   
+  Ground Truth:  Márgenes de la pista
+  Similarity:    0.0
+----------------------------------------
+Field: identifiedBy
+  Transcribed:   C Cebolla | M A Rivas Ponce
+  Ground Truth:  
+  Similarity:    0.0
+----------------------------------------
+Field: latestScientificName
+  Transcribed:   Agrostis manii
+  Ground Truth:  Agrostis manii (Hooker fil) Stapf
+  Similarity:    0.596
+----------------------------------------
+Field: locality
+  Transcribed:   summit of Pico Basilé 32NMJ7396 margins of the track
+  Ground Truth:  Bioco: cumbre del pico Basilé
+  Similarity:    0.346
+----------------------------------------
+Field: originalMethod
+  Transcribed:   Mix of Handwritten and Typed
+  Ground Truth:  Typed
+  Similarity:    0.303
+----------------------------------------
+Field: verbatimCollectors
+  Transcribed:   Fernández Casas
+  Ground Truth:  Fernandez Casas
+  Similarity:    0.933
+----------------------------------------
+Field: verbatimDateIdentified
+  Transcribed:   1993
+  Ground Truth:  
+  Similarity:    0.0
+----------------------------------------
+Field: verbatimLocality
+  Transcribed:   cumbre del pico Basilé 32NMJ7396 2870 m márgenes de la pista
+  Ground Truth:  Bioco: cumbre del pico Basilé
+  Similarity:    0.494
+----------------------------------------
+
+
+Catalog Number: V0597557F
+Total Mistakes: 11
+============================================================
+Field: collectedBy
+  Transcribed:   
+  Ground Truth:  P-Beatra
+  Similarity:    0.0
+----------------------------------------
+Field: country
+  Transcribed:   Democratic Republic of the Congo
+  Ground Truth:  Congo the Democratic Republic of the
+  Similarity:    0.765
+----------------------------------------
+Field: habitat
+  Transcribed:   Herbe
+  Ground Truth:  
+  Similarity:    0.0
+----------------------------------------
+Field: latestScientificName
+  Transcribed:   Carduus leptacanthus
+  Ground Truth:  Cardus leptacanthus Fres
+  Similarity:    0.864
+----------------------------------------
+Field: locality
+  Transcribed:   Musisi
+  Ground Truth:  Parc National de Kahuzi-Biega Kabare Musisi
+  Similarity:    0.245
+----------------------------------------
+Field: municipality
+  Transcribed:   Musisi
+  Ground Truth:  
+  Similarity:    0.0
+----------------------------------------
+Field: originalMethod
+  Transcribed:   Typed
+  Ground Truth:  Mix of Handwritten and Typed
+  Similarity:    0.303
+----------------------------------------
+Field: secondPoliticalUnit
+  Transcribed:   Kabare
+  Ground Truth:  
+  Similarity:    0.0
+----------------------------------------
+Field: verbatimCollectors
+  Transcribed:   
+  Ground Truth:  P-Beatra
+  Similarity:    0.0
+----------------------------------------
+Field: verbatimIdentification
+  Transcribed:   Carduus leptacanthus FRES
+  Ground Truth:  Cardus leptacanthus Fres
+  Similarity:    0.857
+----------------------------------------
+Field: verbatimLocality
+  Transcribed:   Musisi
+  Ground Truth:  Parc National de Kahuzi-Biega Kabare Musisi
+  Similarity:    0.245
+----------------------------------------
+
+
+Catalog Number: V0573776F
+Total Mistakes: 7
+============================================================
+Field: country
+  Transcribed:   Democratic Republic of the Congo
+  Ground Truth:  Congo the Democratic Republic of the
+  Similarity:    0.765
+----------------------------------------
+Field: firstPoliticalUnit
+  Transcribed:   Lado Enclave
+  Ground Truth:  
+  Similarity:    0.0
+----------------------------------------
+Field: latestScientificName
+  Transcribed:   Cyperus maculatus
+  Ground Truth:  Cyperus maculatus Bock
+  Similarity:    0.872
+----------------------------------------
+Field: locality
+  Transcribed:   "Rhino Camp"
+  Ground Truth:  "Rhino Camp" Bahr el Jebel Lado Enclave
+  Similarity:    0.471
+----------------------------------------
+Field: secondPoliticalUnit
+  Transcribed:   Bahr el Jebel
+  Ground Truth:  
+  Similarity:    0.0
+----------------------------------------
+Field: verbatimCollectors
+  Transcribed:   Dr EDGAR A MEARNS Collector
+  Ground Truth:  Dr Edgar A Mearns
+  Similarity:    0.455
+----------------------------------------
+Field: verbatimEventDate
+  Transcribed:   Jan 10 to Feb 2 1910
+  Ground Truth:  Jan 10 to Feb 1910
+  Similarity:    0.947
+----------------------------------------
+
+
+Catalog Number: V0576008F
+Total Mistakes: 6
+============================================================
+Field: country
+  Transcribed:   Democratic Republic of the Congo
+  Ground Truth:  Congo the Democratic Republic of the
+  Similarity:    0.765
+----------------------------------------
+Field: identifiedBy
+  Transcribed:   B Pettersson
+  Ground Truth:  Börge Pettersson
+  Similarity:    0.857
+----------------------------------------
+Field: maximumEventDate
+  Transcribed:   1924-12-00
+  Ground Truth:  1924-00-00
+  Similarity:    0.8
+----------------------------------------
+Field: minimumEventDate
+  Transcribed:   1923-01-00
+  Ground Truth:  1923-00-00
+  Similarity:    0.9
+----------------------------------------
+Field: verbatimCollectors
+  Transcribed:   COLL F G OVERLAET
+  Ground Truth:  F G Overlaet
+  Similarity:    0.345
+----------------------------------------
+Field: verbatimLocality
+  Transcribed:   
+  Ground Truth:  Belgian Congo
+  Similarity:    0.0
+----------------------------------------
+
+
+Catalog Number: V0574052F
+Total Mistakes: 9
+============================================================
+Field: country
+  Transcribed:   Democratic Republic of the Congo
+  Ground Truth:  Congo the Democratic Republic of the
+  Similarity:    0.765
+----------------------------------------
+Field: identifiedBy
+  Transcribed:   A Reith | C Reith
+  Ground Truth:  A A Beetle
+  Similarity:    0.37
+----------------------------------------
+Field: latestScientificName
+  Transcribed:   Scirpus mucronatus
+  Ground Truth:  Scirpus mucronatus L
+  Similarity:    0.947
+----------------------------------------
+Field: maximumEventDate
+  Transcribed:   1924-12-31
+  Ground Truth:  1924-00-00
+  Similarity:    0.6
+----------------------------------------
+Field: minimumEventDate
+  Transcribed:   1923-01-01
+  Ground Truth:  1923-00-00
+  Similarity:    0.8
+----------------------------------------
+Field: verbatimCollectors
+  Transcribed:   COLL F G OVERLAET
+  Ground Truth:  F G Overlaet
+  Similarity:    0.345
+----------------------------------------
+Field: verbatimDateIdentified
+  Transcribed:   1960
+  Ground Truth:  1944
+  Similarity:    0.5
+----------------------------------------
+Field: verbatimIdentification
+  Transcribed:   Scirpus mucronatus L
+  Ground Truth:  Scirpus
+  Similarity:    0.519
+----------------------------------------
+Field: verbatimLocality
+  Transcribed:   
+  Ground Truth:  Belgian Congo
+  Similarity:    0.0
+----------------------------------------
+
+
+Catalog Number: V0577013F
+Total Mistakes: 9
+============================================================
+Field: firstPoliticalUnit
+  Transcribed:   Woleu-Ntem
+  Ground Truth:  
+  Similarity:    0.0
+----------------------------------------
+Field: habitat
+  Transcribed:   Primary rain forest Epiphytic orchid growing in big clumps together Flower greenish-yellow leaves hard succulent
+  Ground Truth:  Primary rain forest
+  Similarity:    0.29
+----------------------------------------
+Field: latestScientificName
+  Transcribed:   Bulbophyllum scaberulum var scaberulum
+  Ground Truth:  Bulbophyllum scaberulum (Rolfe) Bolus var scaberulum
+  Similarity:    0.844
+----------------------------------------
+Field: locality
+  Transcribed:   approximately 6 kilometers northwest of Oyem chantier Rougier Océan
+  Ground Truth:  Ca 6 kilometers northwest of Oveng chantier Rougier Océan
+  Similarity:    0.855
+----------------------------------------
+Field: minimumEventDate
+  Transcribed:   1985-03-03
+  Ground Truth:  1986-03-03
+  Similarity:    0.9
+----------------------------------------
+Field: municipality
+  Transcribed:   Oyem
+  Ground Truth:  
+  Similarity:    0.0
+----------------------------------------
+Field: originalMethod
+  Transcribed:   Mix of Handwritten and Typed
+  Ground Truth:  Typed
+  Similarity:    0.303
+----------------------------------------
+Field: verbatimEventDate
+  Transcribed:   3-3-85
+  Ground Truth:  3-3-36
+  Similarity:    0.667
+----------------------------------------
+Field: verbatimLocality
+  Transcribed:   ca 6 km NW of Oyem chantier Rougier Océan
+  Ground Truth:  Ca 6 km NW of Oveng chantier Rougier Océan
+  Similarity:    0.916
+----------------------------------------
+
+
+Catalog Number: V0577681F
+Total Mistakes: 10
+============================================================
+Field: firstPoliticalUnit
+  Transcribed:   Shewa
+  Ground Truth:  
+  Similarity:    0.0
+----------------------------------------
+Field: habitat
+  Transcribed:   In full sun on lava rock
+  Ground Truth:  
+  Similarity:    0.0
+----------------------------------------
+Field: identifiedBy
+  Transcribed:   G J H Amshoff
+  Ground Truth:  GJH Amshoff
+  Similarity:    0.917
+----------------------------------------
+Field: latestScientificName
+  Transcribed:   Vernonia abyssinica
+  Ground Truth:  Vernonia abyssinica SchBip
+  Similarity:    0.844
+----------------------------------------
+Field: locality
+  Transcribed:   approximately 3 kilometers from Metahara on road to Nazareth
+  Ground Truth:  Shewa ca 3 kilometers from Metahara on road to Nazareth
+  Similarity:    0.852
+----------------------------------------
+Field: municipality
+  Transcribed:   Metahara
+  Ground Truth:  
+  Similarity:    0.0
+----------------------------------------
+Field: originalMethod
+  Transcribed:   Mix of Handwritten and Typed
+  Ground Truth:  Typed
+  Similarity:    0.303
+----------------------------------------
+Field: verbatimCoordinates
+  Transcribed:   c 8°56' N 39°55' E
+  Ground Truth:  c 08° 56' N 39° 55' E
+  Similarity:    0.923
+----------------------------------------
+Field: verbatimElevation
+  Transcribed:   Alt: 925m
+  Ground Truth:  925m
+  Similarity:    0.615
+----------------------------------------
+Field: verbatimLocality
+  Transcribed:   c 3 km from Metahara on road to Nazareth In full sun on lava rock
+  Ground Truth:  Shewa c 3 km from Metahara on road to Nazareth
+  Similarity:    0.721
+----------------------------------------
+
+
+Catalog Number: V0594376F
+Total Mistakes: 7
+============================================================
+Field: identifiedBy
+  Transcribed:   J M Fay
+  Ground Truth:  JM Fay
+  Similarity:    0.923
+----------------------------------------
+Field: latestScientificName
+  Transcribed:   Burkea africana
+  Ground Truth:  Burkea africana Hook
+  Similarity:    0.857
+----------------------------------------
+Field: locality
+  Transcribed:   Park Manovo-Gounda-St Floris vicinity of Camp Koumbala
+  Ground Truth:  Park Manovo-Gounda-Saint Floris Vicinity of Camp Koumbala
+  Similarity:    0.955
+----------------------------------------
+Field: originalMethod
+  Transcribed:   Mix of Handwritten and Typed
+  Ground Truth:  Typed
+  Similarity:    0.303
+----------------------------------------
+Field: otherCatalogNumbers
+  Transcribed:   No 1999188
+  Ground Truth:  1999188
+  Similarity:    0.824
+----------------------------------------
+Field: verbatimElevation
+  Transcribed:   elev: 600 m
+  Ground Truth:  600 m
+  Similarity:    0.625
+----------------------------------------
+Field: verbatimLocality
+  Transcribed:   Park Manovo-Gounda-St Floris Vicinity of Camp Koumbala prec 1200 mm
+  Ground Truth:  Park Manovo-Gounda-St Floris Vicinity of Camp Koumbala
+  Similarity:    0.893
+----------------------------------------
+
+

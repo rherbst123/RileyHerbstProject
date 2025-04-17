@@ -3,7 +3,7 @@ import base64
 import requests
 import time
 
-# --- Configuration variables ---
+
 API_KEY = ""
 MODEL_NAME = "gpt-4o"
 #MODEL_NAME_2 = "o1"
@@ -12,7 +12,7 @@ USER_PROMPT_FILE = r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\Prompts\
 COMBINED_PROMPT_FILE = r"C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\Prompts\\CombinedPrompt.txt"
 
 
-# Set the base folder which contains subfolders (each with images)
+
 BASE_IMAGE_FOLDER = r"C:\\Users\\Riley\\Desktop\\10ImagesTest14"
 
 # Separator between entries in the text file.

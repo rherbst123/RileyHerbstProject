@@ -38,7 +38,7 @@ def detect_text(path):
         print(f"    No text detected in {path}")
         return ""
 
-base_folder = 'C:\\Users\\Riley\\Desktop\\textTest'
+base_folder = 'C:\\Users\\Riley\\Desktop\\300ImageTess\\300ImagesSegmentted4_15_25_FourthRun_Cleaned'
 
 for subfolder in os.listdir(base_folder):
     subfolder_path = os.path.join(base_folder, subfolder)

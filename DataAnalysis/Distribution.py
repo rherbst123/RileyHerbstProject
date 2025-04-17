@@ -65,8 +65,7 @@ def analyze_mismatches(transcribed_path, ground_truth_path, output_txt_path, sho
             plt.tight_layout()
             plt.show()
 
-<<<<<<< Updated upstream
-# # Example usage
+
 analyze_mismatches("C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\300_Images_WHistory.csv",
                    "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\300GroundTruth.csv", 
                    "C:\\Users\\riley\\Desktop\\300Images_W_History.txt")
@@ -74,9 +73,7 @@ analyze_mismatches("C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\Fin
 # analyze_mismatches("C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\260Images_4_10_25_Cropped_Full_Images_GPT4o.csv",
 #                    "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\260ImagesGroundTruth_4_9_25_GPT4o.csv", 
 #                    "C:\\Users\\riley\\Desktop\\260Images.txt")
-=======
-# Example usage
-analyze_mismatches("C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\300_Images_WHistory.csv",
-                    "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\300GroundTruth.csv",
-                    "C:\\Users\\riley\\Desktop\\Entry_Mismatch_Distribution_4_15_25.txt")
->>>>>>> Stashed changes
+
+# analyze_mismatches("C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\GPT_Corrections_4_16_25_260Run.csv",
+#     "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\260ImagesGroundTruth_4_9_25_GPT4o.csv", 
+#                    "C:\\Users\\riley\\Desktop\\CorrectedTest_Test.txt")

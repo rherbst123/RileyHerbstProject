@@ -1,0 +1,4 @@
+Your job is to combine the entries of text into their appropiate fields. 
+Ignore file names like mask_some#
+If there are duplictes of text compare them and see which one has better spelling.
+

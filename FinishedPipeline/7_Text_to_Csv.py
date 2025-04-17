@@ -2,12 +2,10 @@ import csv
 import re
 
 def parse_txt_file(input_filename):
-    """Reads the text file and returns a list of dictionaries (records),
-    each preserving the insertion order of keys."""
     with open(input_filename, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Split content by delimiter lines (assumes a line with only '=' characters)
+    
     entries = re.split(r"\n=+\n", content.strip())
     data = []
 
@@ -16,7 +14,7 @@ def parse_txt_file(input_filename):
         record = {}
         if not lines:
             continue
-        # If the first line starts with "Entry", store it as a separate field.
+       
         if lines[0].strip().startswith("Entry"):
             record["Entry"] = lines[0].strip()
             fields = lines[1:]
@@ -33,7 +31,7 @@ def parse_txt_file(input_filename):
     return data
 
 def get_fieldnames_in_order(data):
-    """Collects field names in the order of first occurrence across the data."""
+   
     fieldnames = []
     for record in data:
         for key in record.keys():
@@ -42,8 +40,7 @@ def get_fieldnames_in_order(data):
     return fieldnames
 
 def write_to_csv(data, output_filename):
-    """Writes the list of dictionaries into a CSV file while preserving field order."""
-    # Get field names preserving the order of first appearance.
+    
     fieldnames = get_fieldnames_in_order(data)
     
     with open(output_filename, "w", newline="", encoding="utf-8") as csvfile:
@@ -53,8 +50,8 @@ def write_to_csv(data, output_filename):
             writer.writerow(record)
 
 def main():
-    input_filename = "FinishedPipeline/Outputs/TXT/Qwen2.5_Max_4_15_25_Test_3.txt"  # The input text file
-    output_filename = "FinishedPipeline/Outputs/CSV/Qwen2.5_Max_4_15_25_Test_3.csv"   # The output CSV file
+    input_filename = "FinishedPipeline/Outputs/TXT/GPT_Corrections_4_16_25_260Run_Second.txt"  # The input text file
+    output_filename = "FinishedPipeline/Outputs/CSV/GPT_Corrections_4_16_25_260Run_Second.csv"   # The output CSV file
 
     # Parse the text file into structured data
     data = parse_txt_file(input_filename)
