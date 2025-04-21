@@ -3,7 +3,17 @@ from difflib import SequenceMatcher
 from pathlib import Path
 
 EXCLUDE_FIELDS = [
-    "accessURI"
+    "accessURI",
+    "locality",
+    "verbatimLocality",
+    "verbatimCollectors",
+    "verbatimCoordinates",
+    "verbatimDateIdentified",
+    "verbaitmEventDate",
+    "originalMethod",
+    "verbatimElevation",
+    "verbatimIdentification",
+    "habitat"
     
 ]
 
@@ -96,7 +106,7 @@ def collect_all_mismatches(transcribed_path: str,
     return field_accuracy, total_accuracy
 
 if __name__ == "__main__":
-    field_acc, overall = collect_all_mismatches(r"C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\Gpt260_ClaudeConfirmed.csv",
+    field_acc, overall = collect_all_mismatches(r"C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\Claude260_4_19_25.csv",
                    r"C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\GroundTruth\\260ImagesGroundTruth_Edit.csv", 
                    r"C:\\Users\\riley\\Desktop\\260Gpt_ClaudeConf_4_19_25.txt")
     print("Accuracy by field:")
