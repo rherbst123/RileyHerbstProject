@@ -3,13 +3,13 @@ import base64
 import requests
 import time
 
-API_KEY = ""
-MODEL_NAME = "gpt-4.1"
+API_KEY = "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"
+MODEL_NAME = "gpt-4o-mini"
 SYSTEM_PROMPT_FILE = r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\Prompts\SystemPrompt.txt"
-USER_PROMPT_FILE   = r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\Prompts\Prompt_1.5.2.txt"
+USER_PROMPT_FILE   = r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\Prompts\Prompt_1.5.3.txt"
 
-TEXT_FOLDER = r"C:\Users\Riley\Desktop\TextCorrection\260Test\Finished"      # folder with .txt inputs
-OUTPUT_FILE = r"C:\Users\Riley\Desktop\TextCorrection\260Test\FinalOutput\GPT_Corrections_4_16_25_260Run_Second.txt"
+TEXT_FOLDER = r"C:\Users\Riley\Desktop\TextCorrection\260ImagesSegmentted_4_19_25_FourthRun_TextCorrection_Gpto4_Confirmed_Gpto4\Finished"      # folder with .txt inputs
+OUTPUT_FILE = r"C:\Users\Riley\Desktop\TextCorrection\260ImagesSegmentted_4_19_25_FourthRun_TextCorrection_Gpto4_Confirmed_Gpto4\FinalOutput\GPTo4Traanscribed_Gpto4Confirmed.txt"
 
 
 def read_text(file_path: str) -> str:

@@ -4,11 +4,11 @@ import requests
 import time
 
 # ——— CONFIG ———
-API_KEY            = ""  # ← your OpenAI API key
-MODEL_NAME         = "gpt-4o"
+API_KEY            = "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"  # ← your OpenAI API key
+MODEL_NAME         = "gpt-4o-mini"
 SYSTEM_PROMPT_FILE = r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\Prompts\SystemPrompt.txt"
-USER_PROMPT_FILE   = r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\Prompts\TextCorrection.txt"
-PARENT_FOLDER      = r"c:\Users\Riley\Desktop\TextCorrection\260Test"
+#USER_PROMPT_FILE   = r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\Prompts\TextCorrection.txt"
+PARENT_FOLDER      = r"c:\Users\Riley\Desktop\TextCorrection\260ImagesSegmentted_4_19_25_FourthRun_TextCorrection_Gpto4"
 # ————————
 
 def read_text_file(path):
@@ -24,7 +24,7 @@ def determine_type(path):
 
 # load prompts once
 system_prompt = read_text_file(SYSTEM_PROMPT_FILE)
-user_prompt   = read_text_file(USER_PROMPT_FILE)
+#user_prompt   = read_text_file(USER_PROMPT_FILE)
 
 headers = {
     "Content-Type": "application/json",
@@ -79,7 +79,6 @@ for sub in sorted(os.listdir(PARENT_FOLDER)):
                 "messages": [
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": [
-                        {"type": "text", "text": user_prompt},
                         {"type": "text", "text": raw_text},
                         {"type": "image_url", "image_url": {"url": f"data:{mime};base64,{b64}"}}
                     ]}
@@ -106,6 +105,7 @@ for sub in sorted(os.listdir(PARENT_FOLDER)):
             #out.write(f"Raw text ({txt_fn}):\n{raw_text}\n\n")
             out.write(f"\n{corrected}\n")
             out.write(sep)
+            time.sleep(2)
 
     print(f"→ Wrote results for '{sub}' to {out_path!r}")
 

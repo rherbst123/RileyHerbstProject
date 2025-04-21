@@ -4,17 +4,13 @@ import shutil
 # ===‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑
 # 1️⃣  UPDATE THESE TWO PATHS FOR YOUR MACHINE
 # ----------------------------------------------------
-SOURCE_DIR   = r"C:\Users\Riley\Desktop\300ImageTess\300Images_4_14_25_SatBri_Completed"          # e.g.  ...\NewImages
-PARENT_DIR   = r"C:\Users\Riley\Desktop\TextCorrection\260Test"             # e.g.  ...\ParentFolder
+SOURCE_DIR   = r"C:\Users\Riley\Desktop\300ImageTess\300Images_4_9_25_Resized"          # e.g.  ...\NewImages
+PARENT_DIR   = r"C:\Users\Riley\Desktop\TextCorrection\260ImagesSegmentted4_19_25_FourthRun"             # e.g.  ...\ParentFolder
 # ----------------------------------------------------
 # extensions we accept for both source & target
 EXTENSIONS = {".jpg", ".jpeg", ".png", ".tif", ".tiff"}
 
 def build_source_map(src_root):
-    """
-    Return dict {base_id: full_source_path}.
-    Example: 0002_V0576008F → C:\...\Input10Images\0002_V0576008F.jpg
-    """
     src_map = {}
     for fname in os.listdir(src_root):
         root, ext = os.path.splitext(fname)

@@ -66,9 +66,9 @@ def analyze_mismatches(transcribed_path, ground_truth_path, output_txt_path, sho
             plt.show()
 
 
-analyze_mismatches("C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\300_Images_WHistory.csv",
-                   "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\300GroundTruth.csv", 
-                   "C:\\Users\\riley\\Desktop\\300Images_W_History.txt")
+analyze_mismatches("C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\Claude260_4_19_25.csv",
+                   "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\GroundTruth\\260ImagesGroundTruth_Edit.csv", 
+                   "C:\\Users\\riley\\Desktop\\260Claude_4_19_25.txt")
 
 # analyze_mismatches("C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\260Images_4_10_25_Cropped_Full_Images_GPT4o.csv",
 #                    "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\260ImagesGroundTruth_4_9_25_GPT4o.csv", 
@@ -77,3 +77,4 @@ analyze_mismatches("C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\Fin
 # analyze_mismatches("C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\GPT_Corrections_4_16_25_260Run.csv",
 #     "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\260ImagesGroundTruth_4_9_25_GPT4o.csv", 
 #                    "C:\\Users\\riley\\Desktop\\CorrectedTest_Test.txt")
+ 
