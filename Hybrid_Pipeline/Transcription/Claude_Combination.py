@@ -3,7 +3,7 @@ import requests
 import time
 
 # ——— CONFIG ———
-API_KEY             = "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"  # ← your Claude API key here
+API_KEY             = ""  # ← your Claude API key here
 MODEL_NAME          = "claude-3-7-sonnet-20250219"  # or "claude-3.7-sonnet-20250219"
 SYSTEM_PROMPT_FILE  = r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\Prompts\SystemPrompt.txt"
 USER_PROMPT_FILE    = r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\Prompts\Prompt_1.5.3.txt"
