@@ -2,20 +2,7 @@ import pandas as pd
 from difflib import SequenceMatcher
 from pathlib import Path
 
-EXCLUDE_FIELDS = [
-    "accessURI",
-    "locality",
-    "verbatimLocality",
-    "verbatimCollectors",
-    "verbatimCoordinates",
-    "verbatimDateIdentified",
-    "verbaitmEventDate",
-    "originalMethod",
-    "verbatimElevation",
-    "verbatimIdentification",
-    "habitat"
-    
-]
+EXCLUDE_FIELDS = []
 
 def string_similarity(a: str, b: str) -> float:
     return SequenceMatcher(None, a, b).ratio()
@@ -30,17 +17,18 @@ def clean_dataframe(df: pd.DataFrame) -> pd.DataFrame:
             .str.replace(r"\.0$", "", regex=True)
             .str.replace(r"[.,]", "", regex=True)
             .replace({"nan": ""})
-            .replace(
-                {r"^(?:na|n/a|N/A|none|na\.?|n\.a\.?)$": ""},
-                regex=True,
-            )
+            .replace({r"^(?:na|n/a|N/A|none|na\.?|n\.a\.?)$": ""}, regex=True)
         )
     return out
 
-def collect_all_mismatches(transcribed_path: str,
-                           ground_truth_path: str,
-                           output_txt_path: str,
-                           exclude: list[str] | None = None):
+def collect_all_mismatches(
+        transcribed_path: str,
+        ground_truth_path: str,
+        output_txt_path: str,
+        *,
+        exclude: list[str] | None = None,
+        tolerance: float = 1.0               # ← NEW: similarity cut‑off
+    ):
 
     exclude = set(exclude or EXCLUDE_FIELDS)
     read_opts = dict(dtype=str, keep_default_na=False)
@@ -68,20 +56,23 @@ def collect_all_mismatches(transcribed_path: str,
     for f in fields:
         t_col = merged[f"{f}_t"]
         g_col = merged[f"{f}_g"]
-        equal_mask = t_col.eq(g_col)
-        per_field_matches[f] += equal_mask.sum()
-        total_matches += equal_mask.sum()
-        total_compares += len(equal_mask)
-        diff_rows = (~equal_mask).to_numpy().nonzero()[0]
-        for idx in diff_rows:
-            mismatches_by_entry.setdefault(merged["catalogNumber"][idx], []).append(
-                {
-                    "Field": f,
-                    "Transcribed": t_col.iloc[idx],
-                    "GroundTruth": g_col.iloc[idx],
-                    "Similarity": round(string_similarity(t_col.iloc[idx], g_col.iloc[idx]), 3),
-                }
-            )
+
+        for idx, (t_val, g_val) in enumerate(zip(t_col, g_col)):
+            sim = string_similarity(t_val, g_val)
+            is_match = (sim >= tolerance)
+            if is_match:
+                per_field_matches[f] += 1
+                total_matches += 1
+            else:
+                mismatches_by_entry.setdefault(merged["catalogNumber"][idx], []).append(
+                    {
+                        "Field": f,
+                        "Transcribed": t_val,
+                        "GroundTruth": g_val,
+                        "Similarity": round(sim, 3),
+                    }
+                )
+            total_compares += 1
 
     with Path(output_txt_path).open("w", encoding="utf-8") as fh:
         for cat_num in catalog_order:
@@ -106,9 +97,13 @@ def collect_all_mismatches(transcribed_path: str,
     return field_accuracy, total_accuracy
 
 if __name__ == "__main__":
-    field_acc, overall = collect_all_mismatches(r"C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\Claude260_4_19_25.csv",
-                   r"C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\GroundTruth\\260ImagesGroundTruth_Edit.csv", 
-                   r"C:\\Users\\riley\\Desktop\\260Gpt_ClaudeConf_4_19_25.txt")
+    field_acc, overall = collect_all_mismatches(
+        r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\FinishedPipeline\Outputs\CSV\CrossValidated_260_withClaude.csv",
+        r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\FinishedPipeline\Outputs\GroundTruth\260ImagesGroundTruth_Edit.csv",
+        r"C:\Users\riley\Desktop\CrossValid.txt",
+        tolerance=0.950   
+    )
+
     print("Accuracy by field:")
     for k, v in sorted(field_acc.items(), key=lambda x: x[0].lower()):
         print(f"  {k}: {v:.2f}%")

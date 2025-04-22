@@ -66,9 +66,9 @@ def analyze_mismatches(transcribed_path, ground_truth_path, output_txt_path, sho
             plt.show()
 
 
-analyze_mismatches("C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\Claude260_4_19_25.csv",
+analyze_mismatches("C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\CrossValidated_260_withClaude.csv",
                    "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\GroundTruth\\260ImagesGroundTruth_Edit.csv", 
-                   "C:\\Users\\riley\\Desktop\\260Gpt_ClaudeConf_4_19_25.txt")
+                   "C:\\Users\\riley\\Desktop\\CrossValidTest.txt")
 
 # analyze_mismatches("C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\260Images_4_10_25_Cropped_Full_Images_GPT4o.csv",
 #                    "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\FinishedPipeline\\Outputs\\CSV\\260ImagesGroundTruth_4_9_25_GPT4o.csv", 
