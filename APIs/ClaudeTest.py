@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 # Load API key from environment variable
 
-ANTHROPIC_API_KEY = "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"
+ANTHROPIC_API_KEY = ""
 
 def encode_image_to_base64(image_path):
     """Convert an image file to base64 encoding"""

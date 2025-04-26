@@ -1,1 +1,9 @@
-300_Images_WHistory
+ # "locality",
+    # "verbatimLocality",
+    # "verbatimCollectors",
+    # "verbatimCoordinates",
+    # "verbatimDateIdentified",
+    # "verbaitmEventDate",
+    # "originalMethod",
+    # "verbatimElevation",
+    # "verbatimIdentification",

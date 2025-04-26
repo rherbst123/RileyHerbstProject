@@ -2,7 +2,7 @@ import os, base64, time, json, requests
 
 # ── CONFIG ────────────────────────────────────────────────────────────────────
 API_KEY            = ""
-MODEL_NAME         = "gpt-4o-mini"
+MODEL_NAME         = "o4-mini"
 SYSTEM_PROMPT_FILE = r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\Prompts\SystemPrompt.txt"
 PARENT_FOLDER      = r"c:\Users\Riley\Desktop\TextCorrection\260ImagesSegmentted_4_19_25_FourthRun_TextCorrection_Gpto4"
 

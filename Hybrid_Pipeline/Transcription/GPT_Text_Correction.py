@@ -5,7 +5,7 @@ import time
 
 # ——— CONFIG ———
 API_KEY            = ""  # ← your OpenAI API key
-MODEL_NAME         = "gpt-4o-mini"
+MODEL_NAME         = "gpt-4o"
 SYSTEM_PROMPT_FILE = r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\Prompts\SystemPrompt.txt"
 #USER_PROMPT_FILE   = r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\Prompts\TextCorrection.txt"
 PARENT_FOLDER      = r"c:\Users\Riley\Desktop\TextCorrection\260ImagesSegmentted_4_19_25_FourthRun_TextCorrection_Gpto4"

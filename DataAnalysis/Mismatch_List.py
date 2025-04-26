@@ -98,7 +98,7 @@ def collect_all_mismatches(
 
 if __name__ == "__main__":
     field_acc, overall = collect_all_mismatches(
-        r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\FinishedPipeline\Outputs\CSV\CrossValidated_260_withClaude.csv",
+        r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\FinishedPipeline\Outputs\CSV\Claude260_4_19_25.csv",
         r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\FinishedPipeline\Outputs\GroundTruth\260ImagesGroundTruth_Edit.csv",
         r"C:\Users\riley\Desktop\CrossValid.txt",
         tolerance=0.950   
