@@ -1,9 +1,1 @@
- # "locality",
-    # "verbatimLocality",
-    # "verbatimCollectors",
-    # "verbatimCoordinates",
-    # "verbatimDateIdentified",
-    # "verbaitmEventDate",
-    # "originalMethod",
-    # "verbatimElevation",
-    # "verbatimIdentification",
+260Images_4_10_25_Only_Collage_GPT4o
