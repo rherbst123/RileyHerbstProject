@@ -7,8 +7,8 @@ API_KEY = ""
 MODEL_NAME = "gpt-4o"
 SYSTEM_PROMPT_FILE = "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\Prompts\\SystemPrompt.txt"
 USER_PROMPT_FILE = "C:\\Users\\Riley\\Documents\\GitHub\\RileyHerbstProject\\Prompts\\Prompt_1.5.2.txt"
-IMAGE_FOLDER = "c:\\Users\\Riley\\Desktop\\300ImagesCollage"  
-OUTPUT_FILE = "c:\\Users\\Riley\\Desktop\\300Images_4_10_25_Only_Collaage_GPT4o.txt"
+IMAGE_FOLDER = "C:\\Users\\riley\\Desktop\\300ImagesTranscription\\300ImagesCollage"  
+OUTPUT_FILE = "c:\\Users\\Riley\\Desktop\\260OnlyCollage.txt"
 
 def read_text_file(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:

@@ -98,10 +98,10 @@ def collect_all_mismatches(
 
 if __name__ == "__main__":
     field_acc, overall = collect_all_mismatches(
-        r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\FinishedPipeline\Outputs\CSV\260Images_4_10_25_Cropped_Full_Images_GPT4o.csv",
-        r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\FinishedPipeline\Outputs\GroundTruth\260ImagesGroundTruth_Edit.csv",
-        r"C:\Users\riley\Desktop\Mismatched_260Images_4_10_25_Cropped_Full_Images_GPT4o.txt",
-        tolerance=1.0   
+        r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\TestingPipeline\Outputs\CSV\260OnlyCollage_GPT4o.csv",
+        r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\testingPipeline\Outputs\GroundTruth\260ImagesGroundTruth_Edit.csv",
+        r"C:\Users\riley\Desktop\Mismatched_260_CollageOnly.txt",
+        tolerance=0.95   
     )
 
     print("Accuracy by field:")
