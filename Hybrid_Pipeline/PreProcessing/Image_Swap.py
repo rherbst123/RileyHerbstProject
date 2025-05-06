@@ -1,13 +1,9 @@
 import os
 import shutil
 
-# ===‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑‑
-# 1️⃣  UPDATE THESE TWO PATHS FOR YOUR MACHINE
-# ----------------------------------------------------
-SOURCE_DIR   = r"C:\Users\Riley\Desktop\300ImageTess\300Images_4_9_25_Resized"          # e.g.  ...\NewImages
-PARENT_DIR   = r"C:\Users\Riley\Desktop\TextCorrection\260ImagesSegmentted4_19_25_FourthRun"             # e.g.  ...\ParentFolder
-# ----------------------------------------------------
-# extensions we accept for both source & target
+SOURCE_DIR   = r"C:\Users\Riley\Desktop\300ImageTess\300Images_4_9_25_Resized"          
+PARENT_DIR   = r"C:\Users\Riley\Desktop\TextCorrection\260ImagesSegmentted4_19_25_FourthRun"             
+
 EXTENSIONS = {".jpg", ".jpeg", ".png", ".tif", ".tiff"}
 
 def build_source_map(src_root):
@@ -22,11 +18,11 @@ def replace_visualizations(src_root, parent_root):
     src_map = build_source_map(src_root)
     print(f"Found {len(src_map)} candidate replacement images in SOURCE_DIR")
 
-    # every sub‑folder of PARENT_DIR is one specimen ID
+
     for base_id in os.listdir(parent_root):
         images_dir = os.path.join(parent_root, base_id, "images")
         if not os.path.isdir(images_dir):
-            continue                                  # skip stray files
+            continue                                  
 
         src_path = src_map.get(base_id)
         if not src_path:
