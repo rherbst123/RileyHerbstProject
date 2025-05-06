@@ -2,14 +2,14 @@ import os
 import requests
 import time
 
-# ——— CONFIG ———
-API_KEY             = ""  # ← your Claude API key here
-MODEL_NAME          = "claude-3-7-sonnet-20250219"  # or "claude-3.7-sonnet-20250219"
+
+API_KEY             = ""  
+MODEL_NAME          = "claude-3-7-sonnet-20250219"  
 SYSTEM_PROMPT_FILE  = r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\Prompts\SystemPrompt.txt"
 USER_PROMPT_FILE    = r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\Prompts\Prompt_1.5.3.txt"
 
-TEXT_FOLDER         = r"C:\Users\Riley\Desktop\TextCorrection\260ImagesSegmentted_4_19_25_FourthRun_TextCorrection_Gpto4_Confirmed_Gpto4\Finished"
-OUTPUT_FILE         = r"C:\Users\Riley\Desktop\TextCorrection\260ImagesSegmentted_4_19_25_FourthRun_TextCorrection_Gpto4_Confirmed_Gpto4\FinalOutput\Gpt260_ClaudeConfirmed.txt"
+TEXT_FOLDER         = r"C:\Users\Riley\Documents\GitHub\RileyHerbstProject\DEMO\OCR_Text_Image\Finished"
+OUTPUT_FILE         = r"C:\Users\Riley\Desktop\TextCorrection\ClaaudeConfimredDEMO.txt"
 
 def read_text(path: str) -> str:
     with open(path, "r", encoding="utf-8") as f:

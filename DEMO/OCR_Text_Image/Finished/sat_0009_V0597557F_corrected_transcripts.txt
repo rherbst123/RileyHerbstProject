@@ -1,0 +1,76 @@
+Image: mask_5
+
+The Field Museum (F)
+
+==================================================
+Image: mask_59
+
+FLORE DU PARC NATIONAL DE KAHUZI-BIEGA
+Herbier: P-BEATRA
+
+Famille: ASTERACEAE
+Genre-Espèce: Cardus leptacanthus FRES
+Synonyme:
+Forme biologique: ☑
+Description: Herbe
+
+Secteur:                    Territoire: Kabare
+Localité: Musisi
+Habitat:                    Altitude:
+Coordonnées géographiques:
+
+Province: Sud-Kivu        Pays:
+Nom du récolteur:
+Date de récolte: 05.08.2003        No: 48
+
+==================================================
+Image: mask_7
+
+# FLORE DU PARC NATIONAL DE KAHUZI-BIEGA
+Herbier: P-BEATRA
+
+Famille: ASTERACEAE
+Genre-Espèce: Cardus leptacanthus FRES
+Synonyme:
+Forme biologique:                                                dbh:
+Description: Herbe
+
+Secteur:                           Territoire: Kabare
+Localité: Musisi
+Habitat:                                                           Altitude:
+Coordonnées géographiques:
+
+Province: Sud-Kivu                Pays:
+Nom du récolteur:
+Date de récolte: 05.08.2003      No: 48
+
+==================================================
+Image: sat_0009_V0597557F_segmentation_visualization
+
+Here is the transcription of the text from the herbarium specimen label:
+
+cm 1 2 3 4 5 6 7 8 9
+copyright reserved
+The Field Museum
+
+2257689
+
+FIELD MUSEUM
+OF
+NATURAL HISTORY
+
+FLORE DU PARC NATIONAL DE KAHUZI-BIEGA
+Herbier: P-BEATRA
+
+ASTERACEAE
+Genre-Espèce: Carduus leptacanthus FRES.
+Synonyme:
+Description: Herbe
+Secteur:                    Territoire: Kabare
+Localité: Musisi           Altitude:
+Habitat:                    
+Coordonnées:               Province: Sud-Kivu
+Nom du récolteur:          Date de récolte: 05.08.2003
+                           N°: 48
+
+==================================================

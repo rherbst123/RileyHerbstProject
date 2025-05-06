@@ -1,0 +1,56 @@
+Image: mask_1
+
+# The Field Museum
+
+==================================================
+Image: mask_4
+
+The Field Museum (F)
+
+==================================================
+Image: mask_5
+
+This is a herbarium specimen label from the Smithsonian Institution. Here is the exact transcription:
+
+SMITHSONIAN INSTITUTION
+FROM THE UNITED STATES NATIONAL HERBARIUM
+
+SMITHSONIAN AFRICAN EXPEDITION
+UNDER THE DIRECTION OF COL. THEODORE ROOSEVELT (1909-10)
+
+Cyperus callistus Ridley
+
+"Rhino Camp," Bahr el Jebel, Lado Enclave, Congo Free
+State
+
+No. 2832                                                Dr. EDGAR A. MEARNS, Collector                                Jan. 10 to Feb. 2, 1910
+
+==================================================
+Image: mask_6
+
+Field Museum of Natural History
+Cyperus maculatus Böck.
+J. Raynal                  19.10.1971
+
+==================================================
+Image: sat_0001_V0573776F_segmentation_visualization
+
+The text from the herbarium specimen label:
+
+cm
+1 2 3 4 5 6 7 8 9 10
+copyright reserved
+The Field
+Museum
+
+Field Museum of Natural History
+Cyperus maculatus Böck.
+
+Cyperus callistus Ridley
+
+"Rhino Camp," Bahr el Jebel, Lado Enclave, Congo Free
+State
+2852
+Dr. EDGAR A. MEARNS
+
+==================================================

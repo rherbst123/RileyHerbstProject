@@ -1,0 +1,60 @@
+Image: mask_3
+
+The Field
+Museum
+
+==================================================
+Image: mask_6
+
+The Field Museum (F)
+[barcode]
+
+==================================================
+Image: mask_8
+
+PLANTS of KENYA
+Expedition to Equatorial East Africa (organized by Rijksherbarium, Leiden, sponsored by Centr. Org. Sci. Res., "Z.W.O.")
+
+Nom. Pycreus segmentatus C.B.Cl.
+
+Leg. R. A. Maas Geesteranus no 4924 d.d. 14-VI 1949
+
+Loc. Nyanza Province, Londiani Distr., 
+Tinderet Forest Reserve, Camp I,
+lat. 0° 5' S., long. 35° 27' E.
+
+Habitat & altitud. s. m.
+glade surrounded by rather open, tall
+forest, containing a.o. Dombeya
+mastersii and Olea hochstetteri;
+2260 m s.m.
+
+Annot.
+erect herb; scattered.
+
+==================================================
+Image: sat_0003_V0576279F_segmentation_visualization
+
+Here is the corrected transcription of the herbarium specimen label:
+
+The Field Museum
+copyright reserved
+[Scale bar showing 0-10 cm]
+1735
+
+PLANTS of KENYA
+Expedition to Equatorial East Africa (organized by Rijksherbarium, Leiden, sponsored by Centr. Org. Sci. Res. "Z.W.O")
+
+Nom. Pycreus [species name redacted]
+
+Leg. R. A. Maas Geesteranus no. [number redacted] dd. 14-VI-1949
+
+Loc. Tinderet Forest Reserve, Camp I,
+lat. 0° 5' S., long. 35° [redacted] E.
+glade surrounded by rather open, tall
+[redacted text]
+2260 m s.m.
+
+Annot. [redacted text]
+
+==================================================

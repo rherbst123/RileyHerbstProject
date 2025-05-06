@@ -1,0 +1,30 @@
+Image: mask_6
+
+The Field Museum (F)
+[barcode]
+
+==================================================
+Image: mask_7
+
+PLANTS OF BELGIAN CONGO
+Scirpus
+1923-4
+COLL. F. G. OVERLAET
+
+==================================================
+Image: sat_0007_V0574052F_segmentation_visualization
+
+Here is the corrected transcription of the text visible on the herbarium specimen label:
+
+The Field Museum
+copyright reserved
+
+752378
+
+PLANTS OF BELGIAN CONGO
+Scirpus
+
+1023-4
+COLL. F. G. OVERBY
+
+==================================================

@@ -11,7 +11,7 @@ import math
 #This is the pipeline we will use for production
 
 # Create an EasyOCR reader (specify the languages you want to read)
-reader = easyocr.Reader(['en'])  # You can add more language codes as needed
+reader = easyocr.Reader(['en'])
 
 # Folder containing the images and subfolders
 base_folder = r"C:\Users\Riley\Desktop\300ImagesSegmentted4_19_25_FourthRun"

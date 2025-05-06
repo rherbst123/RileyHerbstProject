@@ -1,0 +1,53 @@
+Image: mask_1
+
+The Field Museum
+
+==================================================
+Image: mask_5
+
+PLANTÆ GUINEÆ ÆQUATORIALIS
+AB HORTO REGIO MATRITENSI DISTRIBUTÆ
+
+CYPERACEÆ
+
+Mariscus alternifolius Vahl
+
+BIOCO: «Malabo, finca las Carboneras, 32NMK7415, 8 m. Bosque secundario y terrenos incultos. Herbácea, 20-30 cm», Carvalho 2102, 26-VII-1986.
+
+Det. C. Cebolla & Mª A. Rivas Ponce (UAM), 1995.
+
+==================================================
+Image: mask_62
+
+PLANTÆ GUINEÆ ÆQUATORIALIS
+AB HORTO REGIO MATRITENSI DISTRIBUTÆ
+
+CYPERACEÆ
+
+Mariscus alternifolius Vahl
+
+BIOCO: «Malabo, finca las Carboneras, 32NMK7415, 8 m. Bosque secundario y terrenos incultos. Herbácea, 20-30 cm», Carvalho 2102, 26-VII-1986.
+
+Det. C. Cebolla & Mª A. Rivas Ponce (UAM), 1995
+
+==================================================
+Image: sat_0005_V0577892F_segmentation_visualization
+
+Here is the corrected transcription of the herbarium label text:
+
+The Field Museum
+copyright reserved
+
+PLANTAE GUINEAE AEQUATORIALIS
+AB HORTO REGIO MATRITENSI DISTRIBUTAE
+
+Mariscus alternifolius Vahl
+
+BIOCO: «Malabo, finca las Carboneras, 
+32NMK7415, 8 m. Bosque secundario y terrenos
+incultos. Herbácea, 20-30 cm, Carvalho 2102,
+26-VII-1986.
+
+Det. C. Cebolla & M. A. Rivas Ponce (UAM), 1995
+
+==================================================

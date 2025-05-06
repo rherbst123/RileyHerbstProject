@@ -1,0 +1,20 @@
+FLORE DU PARC NATIONAL DE KAHUZI-BIEGA
+Herbier: P-BEATRA
+Famille: ASTERACEAE
+Genre-Espèce: Cardus leptacanthus FRES
+Synonyme:
+Forme biologique;
+dbh:
+Description: Herbe
+Secteur:
+Territoire: Kabare
+Localité: Musisi
+Habitat:
+Altitude:
+Coordonnées géographiques:
+Sud-Kivu
+Province:
+Pays:
+Nom du récolteur:
+Date de récolte: 05.08.2003
+No: 48

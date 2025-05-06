@@ -1,0 +1,79 @@
+Image: mask_1
+
+The image shows a logo or nameplate that reads "The Field Museum" in a simple, elegant font. The text appears on what looks like a light gray or stone-colored background.
+
+==================================================
+Image: mask_59
+
+Epiphytic orchid, growing
+big clups together.
+Flowers greenish-yellow
+Leaves hard, succulent.
+
+==================================================
+Image: mask_8
+
+HERBIER NATIONAL DU GABON
+Centre National de la Recherche
+Scientifique et Technologique (CENAREST)
+Récolteurs: J. M. et B. Reitsma
+no. 2013                d.d. 3-3-86
+
+Orchidaceae
+
+Bulbophyllum scaberulum (Rolfe) Bolus
+    var. scaberulum
+
+Primary rain forest, ca 6 km NW
+of Oveng, chantier Rougier Océan.
+0 41 N x 11 07 E
+
+Epiphytic orchid, growing in
+big clumps together.
+Flowers greenish-yellow.
+Leaves hard, succulent.
+
+Det.: Olga Kosovsky, 2011
+
+Collection faite en coopération avec Herbarium Vadense (WAG)
+et New York Botanical Garden (NY)
+1985 - 1986
+
+==================================================
+Image: sat_0004_V0577013F_segmentation_visualization
+
+Here is the corrected transcription of the herbarium label text:
+
+FIELD MUSEUM
+copyright reserved
+cm 0 1 2 3 4 5 6 7 8 9 10
+
+HERBIER NATIONAL DU GABON
+Conservatoire et Technologique (CENAREST)
+Récolteurs: J. M. et B. Reitsma
+no. 2013
+dd. 3-3-86
+
+Orchidaceae
+var. scaberulum
+
+Primary rain forest, ca 6 km NW
+of
+0° 41' N x 11° 07' E
+
+Epiphytic orchid,
+big clumps together.
+Flower greenish-yellow.
+Leaves hard, succulent.
+
+N° 2310219
+FIELD MUSEUM
+OF
+NATURAL HISTORY
+
+Det. Olga Komarova, 1985
+
+Collection faite en coopération avec Missouri Botanical Garden
+et New York Botanical Garden (NY)
+
+==================================================
